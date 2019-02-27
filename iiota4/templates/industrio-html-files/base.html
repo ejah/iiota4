@@ -1,0 +1,267 @@
+{% load cms_tags menu_tags sekizai_tags static%}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}IIOTA - Industrial Internet of Things and Automation{% endblock title %}</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/favicon/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="'{%  static 'img/favicon/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="{% static 'plugins/revolution/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/revolution/css/layers.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/revolution/css/navigation.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    {% render_block "css" %}
+</head>
+<body class="_active-preloader-ovh">
+{% cms_toolbar %}
+<div class="preloader">
+    <div class="spinner"></div>
+</div> <!-- /.preloader -->
+
+<div class="page-wrapper">
+    <div class="header-top home-one clearfix">
+        <div class="container">
+            <div class="logo pull-left">
+                <a href="base.html"><img src="{% static 'images/logo_trans.png' %}" alt="IIOTA Logo"/></a>
+            </div><!-- /.logo -->
+            <div class="header-right-info pull-right">
+                <div class="single-header-right-info">
+                    <div class="icon-box">
+                        <i class="industrio-icon-phone-call"></i>
+                    </div><!-- /.icon-box -->
+                    <div class="text-box">
+                        <p>Bel ons tussen 9.00 en 17.00 uur</p>
+                        <h3><a href="tel:+31622785658">+31 6 22785658</a></h3>
+                        {% static_placeholder "icon_box_tel" %}
+                    </div><!-- /.text-box -->
+                </div><!-- /.single-header-right-info -->
+                <div class="single-header-right-info">
+                    <div class="icon-box">
+                        <i class="industrio-icon-clock"></i>
+                    </div><!-- /.icon-box -->
+                    <div class="text-box">
+                        <p>Maandag tot en met vrijdag</p>
+                        <h3>9.00 - 17.00</h3>
+                        {% static_placeholder "icon_box_clock" %}
+                    </div><!-- /.text-box -->
+                </div><!-- /.single-header-right-info -->
+                <div class="single-header-right-info">
+                    <div class="icon-box">
+                        <i class="industrio-icon-envelope"></i>
+                    </div><!-- /.icon-box -->
+                    <div class="text-box">
+                        <p>Mail ons</p>
+                        <h3><a href="mailto:info@iiota.nl">info@iiota.nl</a></h3>
+                        {% static_placeholder "icon_box_mail" %}
+                    </div><!-- /.text-box -->
+                </div><!-- /.single-header-right-info -->
+            </div><!-- /.header-right-info -->
+        </div><!-- /.container -->
+    </div><!-- /.header-top home-one -->
+
+    <header class="header header-home-one clearfix">
+        <nav class="navbar navbar-default header-navigation stricky clearfix">
+            <div class="container clearfix">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button class="side-nav-toggler side-nav-opener"><i class="fa fa-bars"></i></button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse main-navigation mainmenu " id="main-nav-bar">
+                    <ul class="nav navbar-nav navigation-box">
+                        {% show_menu 0 100 100 100 'industrio-html-files/menu.html' %}
+{#                        <li class="current">#}
+{#                            <a href="index.html">Home</a>#}
+{#                            <ul class="sub-menu">#}
+{#                                <li><a href="index.html">Home Page One</a></li>#}
+{#                                <li><a href="index2.html">Home Page Two</a></li>#}
+{#                                <li><a href="index3.html">Home Page Three</a></li>#}
+{#                            </ul><!-- /.sub-menu -->#}
+{#                        </li>#}
+{#                        <li><a href="about.html">About Us</a></li>#}
+{#                        <li>#}
+{#                            <a href="service.html">Services</a>#}
+{#                            <ul class="sub-menu">#}
+{#                                <li><a href="single-service.html">Chemical Research</a></li>#}
+{#                                <li><a href="single-service.html">Fuel & Gas Management</a></li>#}
+{#                                <li><a href="single-service.html">Eco & Bio Power</a></li>#}
+{#                                <li><a href="single-service.html">Mechanical Engineering</a></li>#}
+{#                                <li><a href="single-service.html">Petroleum Refinery</a></li>#}
+{#                                <li><a href="single-service.html">Power & Energy Sector</a></li>#}
+{#                            </ul><!-- /.sub-menu -->#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="project.html">Projects</a>#}
+{#                            <ul class="sub-menu">#}
+{#                                <li><a href="single-project.html">Project Details</a></li>#}
+{#                            </ul><!-- /.sub-menu -->#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="#">Pages</a>#}
+{#                            <ul class="sub-menu">#}
+{#                                <li><a href="404.html">Error 404</a></li>#}
+{#                                <li><a href="coming-soon.html">Coming Soon</a></li>#}
+{#                                <li><a href="project.html">Projects</a></li>#}
+{#                                <li><a href="single-project.html">Project Details</a></li>#}
+{#                                <li><a href="team.html">Team</a></li>#}
+{#                                <li><a href="testimonials.html">Testimonials</a></li>#}
+{#                            </ul><!-- /.sub-menu -->#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="blog.html">Blog</a>#}
+{#                            <ul class="sub-menu">#}
+{#                                <li><a href="blog.html">Blog Classic</a></li>#}
+{#                                <li><a href="blog-details.html">Blog Details</a></li>#}
+{#                            </ul><!-- /.sub-menu -->#}
+{#                        </li>#}
+{#                        <li><a href="contact.html">Contact Us</a></li>#}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                <div class="right-side-box">
+                    <a href="#" class="rqa-btn"><span class="inner">Vraag het ons<i class="fa fa-caret-right"></i></span></a>
+                </div><!-- /.right-side-box -->
+            </div><!-- /.container -->
+        </nav>
+    </header><!-- /.header -->
+{% block content %}{% endblock content %}
+
+</div><!-- /.page-wrapper -->
+
+{% include "industrio-html-files/footer.html" %}
+
+<section class="hidden-sidebar side-navigation">
+    <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
+    <div class="sidebar-content">
+        <div class="top-content">
+            <a href="index_iiota.html"><img src="{% static 'images/logo_trans.png' %}" alt="IIOTA Logo"/></a>
+        </div><!-- /.top-content -->
+        <nav class="nav-menu middle-content">
+            <ul class="navigation-box">
+                <li class="current">
+                    <a href="base.html">Home <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <ul class="sub-menu">
+                        <li><a href="base.html">Home Page One</a></li>
+                        <li><a href="index2.html">Home Page Two</a></li>
+                        <li><a href="index3.html">Home Page Three</a></li>
+                    </ul><!-- /.sub-menu -->
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li>
+                    <a href="service.html">Services <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <ul class="sub-menu">
+                        <li><a href="single-service.html">Chemical Research</a></li>
+                        <li><a href="single-service.html">Fuel & Gas Management</a></li>
+                        <li><a href="single-service.html">Eco & Bio Power</a></li>
+                        <li><a href="single-service.html">Mechanical Engineering</a></li>
+                        <li><a href="single-service.html">Petroleum Refinery</a></li>
+                        <li><a href="single-service.html">Power & Energy Sector</a></li>
+                    </ul><!-- /.sub-menu -->
+                </li>
+                <li>
+                    <a href="project.html">Projects <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <ul class="sub-menu">
+                        <li><a href="single-project.html">Project Details</a></li>
+                    </ul><!-- /.sub-menu -->
+                </li>
+                <li>
+                    <a href="#">Pages <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <ul class="sub-menu">
+                        <li><a href="404.html">Error 404</a></li>
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="single-project.html">Project Details</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul><!-- /.sub-menu -->
+                </li>
+                <li>
+                    <a href="blog.html">Blog <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <ul class="sub-menu">
+                        <li><a href="blog.html">Blog Classic</a></li>
+                        <li><a href="blog-details.html">Blog Details</a></li>
+                    </ul><!-- /.sub-menu -->
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav><!-- /.nav-menu -->
+        <div class="bottom-content">
+            <div class="social">
+                <a href="#" class="fab fa-facebook-f"></a><!--
+                --><a href="#" class="fab fa-twitter"></a><!--
+                --><a href="#" class="fab fa-google-plus-g"></a><!--
+                --><a href="#" class="fab fa-instagram"></a><!--
+                --><a href="#" class="fab fa-behance"></a>
+            </div><!-- /.social -->
+            <p class="copy-text">&copy; 2018 Industrio. <br/> made with <i class="fa fa-heart"></i> by themexriver</p>
+            <!-- /.copy-text -->
+        </div><!-- /.bottom-content -->
+    </div><!-- /.sidebar-content -->
+</section><!-- /.hidden-sidebar -->
+
+
+<div class="search_area zoom-anim-dialog mfp-hide" id="test-search">
+    <div class="search_box_inner">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fas fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><i class="fa fa-angle-up"></i></div>
+
+<script src="js/jquery.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+<!--Revolution Slider-->
+<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="js/main-slider-script.js"></script>
+{% render_block "js" %}
+
+</body>
+</html>

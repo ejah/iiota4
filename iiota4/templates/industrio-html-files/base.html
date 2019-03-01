@@ -1,4 +1,4 @@
-{% load cms_tags menu_tags sekizai_tags static%}
+{% load cms_tags menu_tags sekizai_tags static %}
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -42,7 +42,7 @@
     <div class="header-top home-one clearfix">
         <div class="container">
             <div class="logo pull-left">
-                <a href="base.html"><img src="{% static 'images/logo_trans.png' %}" alt="IIOTA Logo"/></a>
+                <a href="/"><img src="{% static 'img/logo1-1.png' %}" alt="IIOTA Logo"/></a>
             </div><!-- /.logo -->
             <div class="header-right-info pull-right">
                 <div class="single-header-right-info">
@@ -154,7 +154,7 @@
     <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
     <div class="sidebar-content">
         <div class="top-content">
-            <a href="index_iiota.html"><img src="{% static 'images/logo_trans.png' %}" alt="IIOTA Logo"/></a>
+            <a href="/"><img src="{% static 'img/logo1-1.png' %}" alt="IIOTA Logo"/></a>
         </div><!-- /.top-content -->
         <nav class="nav-menu middle-content">
             <ul class="navigation-box">
@@ -233,34 +233,34 @@
 
 <div class="scroll-to-top scroll-to-target" data-target="html"><i class="fa fa-angle-up"></i></div>
 
-<script src="js/jquery.js"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/isotope.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 
 
 <!--Revolution Slider-->
-<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="js/main-slider-script.js"></script>
+<script src="{% static 'plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'js/main-slider-script.js' %}"></script>
 {% render_block "js" %}
 
 </body>

@@ -1,14 +1,12 @@
-
+{% load static cms_tags menu_tags%}
 <footer class="site-footer fixed-footer">
     <div class="main-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget about-widget">
-                        <a href="base.html"><img src="img/logo2-1.png" alt="Awesome Image"/></a>
-                        <h3>About us</h3>
-                        <p>Many of our SELC registered employees are requested as main preferred temporary staff when a
-                            service.</p>
+                        <a href="/"><img src="{% static 'img/logo1-1.png' %}" alt="IIOTA Logo"/></a>
+                        {% static_placeholder 'about_footer' %}
                     </div><!-- /.footer-widget about-widget -->
                 </div><!-- /.col-md-3 -->
                 <div class="col-md-2 col-sm-6 col-xs-12">
@@ -17,13 +15,7 @@
                             <h3>Links</h3>
                         </div><!-- /.title -->
                         <ul class="links-list">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Project</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            {% show_menu 0 100 100 100 %}
                         </ul><!-- /.links-list -->
                     </div><!-- /.footer-widget links-widget -->
                 </div><!-- /.col-md-2 -->

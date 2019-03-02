@@ -1,5 +1,7 @@
 import os  # isort:skip
+from django.utils.translation import ugettext_lazy as _
 gettext = lambda s: s
+
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
 Django settings for iiota4 project.
@@ -198,3 +200,7 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+DJANGOCMS_LINK_TEMPLATES = [
+    ('feature', _('Featured Version')),
+]

@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'djangocms_owl',
     'iiota4'
 )
 

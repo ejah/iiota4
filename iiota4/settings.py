@@ -204,4 +204,5 @@ THUMBNAIL_PROCESSORS = (
 
 DJANGOCMS_LINK_TEMPLATES = [
     ('feature', _('Featured Version')),
+    ('welkom', _('Welcome Version')),
 ]

@@ -169,6 +169,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('industrio-html-files/index_iiota.html', 'Home'),
+    ('industrio-html-files/iiota-single-service.html', 'Single'),
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')

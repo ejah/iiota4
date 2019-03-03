@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
-    <link rel="manifest" href="'{%  static 'img/favicon/manifest.json' %}">
+    <link rel="manifest" href="'{% static 'img/favicon/manifest.json' %}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -37,115 +37,9 @@
 <div class="preloader">
     <div class="spinner"></div>
 </div> <!-- /.preloader -->
-
 <div class="page-wrapper">
-    <div class="header-top home-one clearfix">
-        <div class="container">
-            <div class="logo pull-left">
-                <a href="/"><img src="{% static 'img/Logo_iiota.png' %}" alt="IIOTA Logo"/></a>
-            </div><!-- /.logo -->
-            <div class="header-right-info pull-right">
-                <div class="single-header-right-info">
-                    <div class="icon-box">
-                        <i class="industrio-icon-phone-call"></i>
-                    </div><!-- /.icon-box -->
-                    <div class="text-box">
-                        <p>Bel ons tussen 9.00 en 17.00 uur</p>
-                        <h3><a href="tel:+31622785658">+31 6 22785658</a></h3>
-                        {% static_placeholder "icon_box_tel" %}
-                    </div><!-- /.text-box -->
-                </div><!-- /.single-header-right-info -->
-                <div class="single-header-right-info">
-                    <div class="icon-box">
-                        <i class="industrio-icon-clock"></i>
-                    </div><!-- /.icon-box -->
-                    <div class="text-box">
-                        <p>Maandag tot en met vrijdag</p>
-                        <h3>9.00 - 17.00</h3>
-                        {% static_placeholder "icon_box_clock" %}
-                    </div><!-- /.text-box -->
-                </div><!-- /.single-header-right-info -->
-                <div class="single-header-right-info">
-                    <div class="icon-box">
-                        <i class="industrio-icon-envelope"></i>
-                    </div><!-- /.icon-box -->
-                    <div class="text-box">
-                        <p>Mail ons</p>
-                        <h3><a href="mailto:info@iiota.nl">info@iiota.nl</a></h3>
-                        {% static_placeholder "icon_box_mail" %}
-                    </div><!-- /.text-box -->
-                </div><!-- /.single-header-right-info -->
-            </div><!-- /.header-right-info -->
-        </div><!-- /.container -->
-    </div><!-- /.header-top home-one -->
-
-    <header class="header header-home-one clearfix">
-        <nav class="navbar navbar-default header-navigation stricky clearfix">
-            <div class="container clearfix">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button class="side-nav-toggler side-nav-opener"><i class="fa fa-bars"></i></button>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse main-navigation mainmenu " id="main-nav-bar">
-                    <ul class="nav navbar-nav navigation-box">
-                        {% show_menu 0 100 100 100 'industrio-html-files/menu.html' %}
-{#                        <li class="current">#}
-{#                            <a href="index.html">Home</a>#}
-{#                            <ul class="sub-menu">#}
-{#                                <li><a href="index.html">Home Page One</a></li>#}
-{#                                <li><a href="index2.html">Home Page Two</a></li>#}
-{#                                <li><a href="index3.html">Home Page Three</a></li>#}
-{#                            </ul><!-- /.sub-menu -->#}
-{#                        </li>#}
-{#                        <li><a href="about.html">About Us</a></li>#}
-{#                        <li>#}
-{#                            <a href="service.html">Services</a>#}
-{#                            <ul class="sub-menu">#}
-{#                                <li><a href="single-service.html">Chemical Research</a></li>#}
-{#                                <li><a href="single-service.html">Fuel & Gas Management</a></li>#}
-{#                                <li><a href="single-service.html">Eco & Bio Power</a></li>#}
-{#                                <li><a href="single-service.html">Mechanical Engineering</a></li>#}
-{#                                <li><a href="single-service.html">Petroleum Refinery</a></li>#}
-{#                                <li><a href="single-service.html">Power & Energy Sector</a></li>#}
-{#                            </ul><!-- /.sub-menu -->#}
-{#                        </li>#}
-{#                        <li>#}
-{#                            <a href="project.html">Projects</a>#}
-{#                            <ul class="sub-menu">#}
-{#                                <li><a href="single-project.html">Project Details</a></li>#}
-{#                            </ul><!-- /.sub-menu -->#}
-{#                        </li>#}
-{#                        <li>#}
-{#                            <a href="#">Pages</a>#}
-{#                            <ul class="sub-menu">#}
-{#                                <li><a href="404.html">Error 404</a></li>#}
-{#                                <li><a href="coming-soon.html">Coming Soon</a></li>#}
-{#                                <li><a href="project.html">Projects</a></li>#}
-{#                                <li><a href="single-project.html">Project Details</a></li>#}
-{#                                <li><a href="team.html">Team</a></li>#}
-{#                                <li><a href="testimonials.html">Testimonials</a></li>#}
-{#                            </ul><!-- /.sub-menu -->#}
-{#                        </li>#}
-{#                        <li>#}
-{#                            <a href="blog.html">Blog</a>#}
-{#                            <ul class="sub-menu">#}
-{#                                <li><a href="blog.html">Blog Classic</a></li>#}
-{#                                <li><a href="blog-details.html">Blog Details</a></li>#}
-{#                            </ul><!-- /.sub-menu -->#}
-{#                        </li>#}
-{#                        <li><a href="contact.html">Contact Us</a></li>#}
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-                <div class="right-side-box">
-                    <a href="#" class="rqa-btn"><span class="inner">Vraag het ons<i class="fa fa-caret-right"></i></span></a>
-                </div><!-- /.right-side-box -->
-            </div><!-- /.container -->
-        </nav>
-    </header><!-- /.header -->
+{% block header_content %}{% endblock header_content %}
 {% block content %}{% endblock content %}
-
 </div><!-- /.page-wrapper -->
 
 {% include "industrio-html-files/footer.html" %}
@@ -159,9 +53,9 @@
         <nav class="nav-menu middle-content">
             <ul class="navigation-box">
                 <li class="current">
-                    <a href="base.html">Home <span class="subnav-toggler fa fa-caret-down"></span></a>
+                    <a href="base_one.html">Home <span class="subnav-toggler fa fa-caret-down"></span></a>
                     <ul class="sub-menu">
-                        <li><a href="base.html">Home Page One</a></li>
+                        <li><a href="base_one.html">Home Page One</a></li>
                         <li><a href="index2.html">Home Page Two</a></li>
                         <li><a href="index3.html">Home Page Three</a></li>
                     </ul><!-- /.sub-menu -->
@@ -170,12 +64,12 @@
                 <li>
                     <a href="service.html">Services <span class="subnav-toggler fa fa-caret-down"></span></a>
                     <ul class="sub-menu">
-                        <li><a href="single-service.html">Chemical Research</a></li>
-                        <li><a href="single-service.html">Fuel & Gas Management</a></li>
-                        <li><a href="single-service.html">Eco & Bio Power</a></li>
-                        <li><a href="single-service.html">Mechanical Engineering</a></li>
-                        <li><a href="single-service.html">Petroleum Refinery</a></li>
-                        <li><a href="single-service.html">Power & Energy Sector</a></li>
+                        <li><a href="iiota-single-service.html">Chemical Research</a></li>
+                        <li><a href="iiota-single-service.html">Fuel & Gas Management</a></li>
+                        <li><a href="iiota-single-service.html">Eco & Bio Power</a></li>
+                        <li><a href="iiota-single-service.html">Mechanical Engineering</a></li>
+                        <li><a href="iiota-single-service.html">Petroleum Refinery</a></li>
+                        <li><a href="iiota-single-service.html">Power & Energy Sector</a></li>
                     </ul><!-- /.sub-menu -->
                 </li>
                 <li>

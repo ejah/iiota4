@@ -1,7 +1,7 @@
 {% load cms_tags %}{% spaceless %}
 
 {# this needs to be in one line for rendering purpose #}
-{% endspaceless %}<a href="{{ link }}" class="theme-btn btn-style-one hvr-sweep-to-right" {% if instance.target %} target="{{ instance.target }}"{% endif %}{% if instance.attributes %} {{ instance.attributes_str }}{% endif %}>{% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% empty %}{{ instance.name }}{% endfor %}<i class="fa fa-arrow-right"></i></a>{% spaceless %}
+{% endspaceless %}<a href="{{ link }}"class="theme-btn btn-style-one hvr-sweep-to-right"{% if instance.target %} target="{{ instance.target }}"{% endif %}{% if instance.attributes %}{{ instance.attributes_str }}{% endif %}>{% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% empty %}{{ instance.name }}{% endfor %}<i class="fa fa-arrow-right"></i></a>{% spaceless %}
 {# Origineel van Industrio <a href="#" class="theme-btn btn-style-one hvr-sweep-to-right">Learn more <i class="fa fa-arrow-right"></i></a>#}
 {% endspaceless %}{% comment %}
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a

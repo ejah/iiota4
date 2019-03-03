@@ -1,4 +1,5 @@
-{% load static i18n cms_tags%}
+{% load static i18n cms_tags %}
+
 <li class="{{ class_name }}" data-description="{{ data_decription }}" data-easein="default"
     data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7"
     data-fstransition="slotzoom-horizontal" data-hideafterloop="0" data-hideslideonmobile="off"
@@ -28,7 +29,7 @@
          data-textalign="['top','top','top','top']"
          data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
          style="z-index: 7; white-space: nowrap;text-align: center;">
-        {% placeholder slide_text %}
+        {% placeholder "{{ slide_text }}" %}
     </div>
 
     <div class="tp-caption tp-resizeme"
@@ -48,7 +49,7 @@
          data-textalign="['top','top','top','top']"
          data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
          style="z-index: 7; white-space: nowrap; text-align: center;">
-        {% placeholder slide_link %}
+        {% placeholder '{{ slide_link }}' %}
     </div>
 
 </li>

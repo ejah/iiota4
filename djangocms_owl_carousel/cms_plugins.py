@@ -42,6 +42,7 @@ class OwlCarouselHolderPlugin(CMSPluginBase):
     render_template = 'owl_carousel_holder.html'
     cache = False
     allow_children = True
+    # child_classes = ['OwlCarouselItem',]
 
     def render(self, context, instance, placeholder):
         context = super(OwlCarouselHolderPlugin, self).render(context, instance, placeholder)
@@ -51,7 +52,7 @@ class OwlCarouselHolderPlugin(CMSPluginBase):
 @plugin_pool.register_plugin
 class OwlCarouselItemPlugin(CMSPluginBase):
     model = OwlCarouselItem
-    name = _("Carousel Item")
+    name = _("Owl Carousel Item")
     render_template = 'owl_carousel_item.html'
     cache = False
     require_parent = True

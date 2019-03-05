@@ -2,12 +2,13 @@
 {% load static cms_tags i18n %}
 {% block content %}
     <!--Main Slider-->
-{% placeholder "main_slider" %}
+    {% placeholder "main_slider" %}
+    {% placeholder "owl_carousel" %}
 
-{# section on services owl-carousel #}
-    {% include 'industrio-html-files/_sectie_services.html' %}
+    {# section on services owl-carousel #}
+{#    {% include 'industrio-html-files/_sectie_services.html' %}#}
 
-{# section with main content   #}
+    {# section with main content   #}
     <section class="about-style-one sec-pad pb0">
         <div class="container">
             <div class="row">
@@ -20,29 +21,29 @@
                                     {% placeholder "statement_1" %}
                                     {% placeholder "statement_2" %}
                                     {% placeholder "statement_3" %}
-{#                                    <li><i class="industrio-icon-next"></i> Our Work Growth</li>#}
-{#                                    <li><i class="industrio-icon-next"></i> 1500 Employed</li>#}
-{#                                </ul><!-- /.list-items -->#}
+                                    {#                                    <li><i class="industrio-icon-next"></i> Our Work Growth</li>#}
+                                    {#                                    <li><i class="industrio-icon-next"></i> 1500 Employed</li>#}
+                                    {#                                </ul><!-- /.list-items -->#}
                             </div><!-- /.col-lg-4 col-md-6 col-sm-12 col-xs-12 -->
                             <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                                 <ul class="list-items">
                                     {% placeholder "statement_4" %}
                                     {% placeholder "statement_5" %}
                                     {% placeholder "statement_6" %}
-{#                                    <li><i class="industrio-icon-next"></i> Our Employee Growth</li>#}
-{#                                    <li><i class="industrio-icon-next"></i> Service Management</li>#}
+                                    {#                                    <li><i class="industrio-icon-next"></i> Our Employee Growth</li>#}
+                                    {#                                    <li><i class="industrio-icon-next"></i> Service Management</li>#}
                                 </ul><!-- /.list-items -->
                             </div><!-- /.col-lg-4 col-md-6 col-sm-12 col-xs-12 -->
                         </div><!-- /.row -->
-{#                        {% placeholder "welkom_link" %}#}
-{#                        <a href="#" class="about-btn hvr-sweep-to-right">Learn about the services</a>#}
+                        {#                        {% placeholder "welkom_link" %}#}
+                        {#                        <a href="#" class="about-btn hvr-sweep-to-right">Learn about the services</a>#}
                     </div><!-- /.about-content -->
 
                 </div><!-- /.col-md-7 -->
                 <div class="col-md-5">
                     <div class="about-img-box">
                         {% placeholder "welkom_image" %}
-{#                        <img src="{% static 'img/about-1-1.png' %}" alt="Awesome Image"/>#}
+                        {#                        <img src="{% static 'img/about-1-1.png' %}" alt="Awesome Image"/>#}
                         <div class="video-box">
                             <img src="{% static 'img/about-1-2.png' %}" alt="Awesome Image"/>
                             <a href="/" class="video-popup"><i
@@ -54,7 +55,7 @@
         </div><!-- /.container -->
     </section><!-- /.about-style-one -->
 
-{#    {% placeholder "owl_carousel" %}#}
+
 
     <section class="service-style-one sec-pad pb0">
         <div class="container">

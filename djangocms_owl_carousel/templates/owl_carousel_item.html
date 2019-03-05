@@ -25,12 +25,14 @@
                     <div class="text-box">
                         <h3>{{ instance.title }}</h3>
                         <p>{{ instance.text }}</p>
-                            {% if instance.child_plugin_instances %}
-                                {% with instance.child_plugin_instances|first as plugin %}
+                        {% if instance.child_plugin_instances %}
+                            {% for plugin in instance.child_plugin_instances %}
+                                {% if plugin.plugin_type == 'LinkPlugin' %}
                                     {% render_plugin plugin %}
-                                {% endwith %}
-                            {% endif %}
-{#                        <a href="#" class="more">Learn more <i class="fa fa-angle-right"></i></a>#}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {#                        <a href="#" class="more">Learn more <i class="fa fa-angle-right"></i></a>#}
                     </div><!-- /.text-box -->
                 </div><!-- /.content -->
             </div><!-- /.box -->

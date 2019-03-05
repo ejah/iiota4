@@ -1,0 +1,10 @@
+{% load cms_tags %}
+<section class="{{ instance.section_style }}">
+    <div class="container">
+        <div class="{{ instance.style }}">
+            {% for plugin in instance.child_plugin_instances %}
+                {% render_plugin plugin %}
+            {% endfor %}
+        </div><!-- /.service-carousel-style-two -->
+    </div><!-- /.container -->
+</section><!-- /.service-style-two -->

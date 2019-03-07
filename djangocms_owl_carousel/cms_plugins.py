@@ -4,7 +4,13 @@ from cms.plugin_pool import plugin_pool
 # from djangocms_link.cms_plugins import LinkPlugin
 from django.utils.translation import ugettext_lazy as _
 
-from djangocms_owl_carousel.models import CarouselHolder, CarouselItem, OwlCarouselHolder, OwlCarouselItem
+from django.contrib.admin import StackedInline
+from djangocms_owl_carousel.models import CarouselHolder, CarouselItem, OwlCarouselHolder, OwlCarouselItem, OWL_STYLE_CHOICES, OwlStyles
+
+
+
+class OwlStyleStackedInline(StackedInline):
+    model = OwlStyles
 
 
 @plugin_pool.register_plugin
@@ -42,11 +48,17 @@ class OwlCarouselHolderPlugin(CMSPluginBase):
     render_template = 'owl_carousel_holder.html'
     cache = False
     allow_children = True
+    # inlines = [OwlStyleStackedInline,]
     # child_classes = ['OwlCarouselItem',]
 
-    def render(self, context, instance, placeholder):
-        context = super(OwlCarouselHolderPlugin, self).render(context, instance, placeholder)
-        return context
+    def get_render_template(self, context, instance, placeholder):
+        for child_instance in instance.child_plugin_instances:
+            child_instance.render_template = instance.style.item_template
+        return instance.style.main_template
+
+    # def render(self, context, instance, placeholder):
+    #     context = super(OwlCarouselHolderPlugin, self).render(context, instance, placeholder)
+    #     return context
 
 
 @plugin_pool.register_plugin
@@ -58,6 +70,9 @@ class OwlCarouselItemPlugin(CMSPluginBase):
     require_parent = True
     allow_children = True
     child_classes = ['LinkPlugin', ]
+
+    # def get_render_template(self, context, instance, placeholder):
+    #     return instance.parent.style.item_template
 
     def render(self, context, instance, placeholder):
         context = super(OwlCarouselItemPlugin, self).render(context, instance, placeholder)

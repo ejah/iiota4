@@ -1,0 +1,48 @@
+{% load cms_tags %}
+<div class="item">
+    <div class="single-service-style-two">
+        <div class="img-box">
+            {% if instance.child_plugin_instances %}
+                            {% for plugin in instance.child_plugin_instances %}
+                                {% if plugin.plugin_type == 'PicturePlugin' %}
+                                    {% render_plugin plugin %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+{#            <img src="{{ instance.image.url }}" alt="{{ instance.alt_text }}"/>#}
+        </div><!-- /.img-box -->
+        <div class="overlay">
+            <div class="box">
+                <div class="content">
+                    <div class="icon-box">
+                        <i class="{{ instance.icon }}"></i>
+                    </div><!-- /.icon-box -->
+                    <div class="text-box">
+                        <h3>{{ instance.title }}</h3>
+                    </div><!-- /.text-box -->
+                </div><!-- /.content -->
+            </div><!-- /.box -->
+        </div><!-- /.overlay -->
+        <div class="hover">
+            <div class="box">
+                <div class="content">
+                    <div class="icon-box">
+                        <i class="{{ instance.icon }}"></i>
+                    </div><!-- /.icon-box -->
+                    <div class="text-box">
+                        <h3>{{ instance.title }}</h3>
+                        <p>{{ instance.text }}</p>
+                        {% if instance.child_plugin_instances %}
+                            {% for plugin in instance.child_plugin_instances %}
+                                {% if plugin.plugin_type == 'LinkPlugin' %}
+                                    {% render_plugin plugin %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        {#                        <a href="#" class="more">Learn more <i class="fa fa-angle-right"></i></a>#}
+                    </div><!-- /.text-box -->
+                </div><!-- /.content -->
+            </div><!-- /.box -->
+        </div><!-- /.hover -->
+    </div><!-- /.single-service-style-two -->
+</div><!-- /.item -->

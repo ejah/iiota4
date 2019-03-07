@@ -2,11 +2,40 @@ from cms.cms_plugins import CMSPlugin
 from django.db import models
 # from django.utils.translation import ugettext_lazy as _
 
+SERVICE_STYLE_ONE = 1
+SERVICE_STYLE_TWO = 2
+SERVICE_STYLE_THREE = 3
+SERVICE_STYLE_FOUR = 4
+PORTFOLIO_STYLE_TWO = 5
+TESTIMONIALS_STYLE_ONE = 6
+TESTIMONIALS_STYLE_TWO = 7
+TESTIMONIALS_STYLE_THREE = 8
+TESTIMONIALS_STYLE_FOUR = 9
+
+OWL_STYLE_CHOICES = (
+    (SERVICE_STYLE_ONE, 'Service style one'),
+    (SERVICE_STYLE_TWO, 'Service style two'),
+    (SERVICE_STYLE_THREE, 'Service style three'),
+    (SERVICE_STYLE_FOUR, 'Service style four'),
+    (PORTFOLIO_STYLE_TWO, 'Portfolio style two'),
+    (TESTIMONIALS_STYLE_ONE, 'Testimonials, style one'),
+    (TESTIMONIALS_STYLE_TWO, 'Testimonials style two'),
+    (TESTIMONIALS_STYLE_THREE, 'Testimonials style three'),
+    (TESTIMONIALS_STYLE_FOUR, 'Testimonials style four'),
+)
+
+class OwlStyles(models.Model):
+    title = models.CharField(max_length=30, null=False)
+    main_template = models.CharField(max_length=100)
+    item_template = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
 
 # Create your models here.
 class CarouselHolder(CMSPlugin):
     pass
-
 
 class CarouselItem(CMSPlugin):
     image_thumb = models.ImageField(verbose_name='Thumb image', null=True)
@@ -20,8 +49,11 @@ class CarouselItem(CMSPlugin):
 
 
 class OwlCarouselHolder(CMSPlugin):
-    section_style = models.CharField(max_length=75, default='service-style-two', null=True)
-    style = models.CharField(max_length=75, default='service-carousel-style-two', null=True)
+    style = models.ForeignKey(OwlStyles, on_delete=None)
+
+    def copy_relations(self, oldinstance):
+        self.sections = oldinstance.sections.all()
+
 
 
 class OwlCarouselItem(CMSPlugin):

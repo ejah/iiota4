@@ -45,7 +45,7 @@ class CarouselItemPlugin(CMSPluginBase):
 class OwlCarouselHolderPlugin(CMSPluginBase):
     model = OwlCarouselHolder
     name = _("Owl Carousel Holder")
-    render_template = 'owl_carousel_holder.html'
+    # render_template = 'owl_carousel_holder.html'
     cache = False
     allow_children = True
     # inlines = [OwlStyleStackedInline,]
@@ -71,9 +71,9 @@ class OwlCarouselItemPlugin(CMSPluginBase):
     allow_children = True
     child_classes = ['LinkPlugin', ]
 
-    # def get_render_template(self, context, instance, placeholder):
-    #     return instance.parent.style.item_template
+    def get_render_template(self, context, instance, placeholder):
+        return instance.style.item_template
 
-    def render(self, context, instance, placeholder):
-        context = super(OwlCarouselItemPlugin, self).render(context, instance, placeholder)
-        return context
+    # def render(self, context, instance, placeholder):
+    #     context = super(OwlCarouselItemPlugin, self).render(context, instance, placeholder)
+    #     return context

@@ -51,10 +51,6 @@ class CarouselItem(CMSPlugin):
 class OwlCarouselHolder(CMSPlugin):
     style = models.ForeignKey(OwlStyles, on_delete=None)
 
-    def copy_relations(self, oldinstance):
-        self.sections = oldinstance.sections.all()
-
-
 
 class OwlCarouselItem(CMSPlugin):
     INDUSTRIO_ICON_EMAILS_INTERFACE_DOWNLOAD_SYMBOL = 'industrio-icon-emails-interface-download-symbol'
@@ -135,7 +131,8 @@ class OwlCarouselItem(CMSPlugin):
 
     image = models.ImageField(verbose_name='Thumb image', null=True)
     alt_text = models.CharField(max_length=100, null=True)
-    style = models.CharField(max_length=75, default='single-service-style-two', null=True)
+    style = models.ForeignKey(OwlStyles, on_delete=None)
+
     icon = models.CharField(max_length=35, choices=OWL_ICON_CHOICES)
     title = models.CharField(max_length=75, null=True)
     text = models.TextField(max_length=200, null=True)

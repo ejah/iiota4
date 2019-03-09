@@ -1,12 +1,10 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
-# from cms.models.pluginmodel import CMSPlugin
-# from djangocms_link.cms_plugins import LinkPlugin
 from django.utils.translation import ugettext_lazy as _
 
 from django.contrib.admin import StackedInline
-from djangocms_owl_carousel.models import CarouselHolder, CarouselItem, OwlCarouselHolder, OwlCarouselItem, OWL_STYLE_CHOICES, OwlStyles
-
+from djangocms_owl_carousel.models import CarouselHolder, CarouselItem, OwlCarouselHolder, OwlCarouselItem, \
+    OWL_STYLE_CHOICES, OwlStyles, ReferenceStoryPlugin
 
 
 class OwlStyleStackedInline(StackedInline):
@@ -45,20 +43,15 @@ class CarouselItemPlugin(CMSPluginBase):
 class OwlCarouselHolderPlugin(CMSPluginBase):
     model = OwlCarouselHolder
     name = _("Owl Carousel Holder")
-    # render_template = 'owl_carousel_holder.html'
     cache = False
     allow_children = True
-    # inlines = [OwlStyleStackedInline,]
-    # child_classes = ['OwlCarouselItem',]
+
 
     def get_render_template(self, context, instance, placeholder):
-        for child_instance in instance.child_plugin_instances:
-            child_instance.render_template = instance.style.item_template
+        # probeer een style item aan de context toe te voegen.
+        context['item_style'] = instance.style.item_template
         return instance.style.main_template
 
-    # def render(self, context, instance, placeholder):
-    #     context = super(OwlCarouselHolderPlugin, self).render(context, instance, placeholder)
-    #     return context
 
 
 @plugin_pool.register_plugin
@@ -72,8 +65,17 @@ class OwlCarouselItemPlugin(CMSPluginBase):
     child_classes = ['LinkPlugin', ]
 
     def get_render_template(self, context, instance, placeholder):
-        return instance.style.item_template
+        testje = context['item_style']
+        return testje
+        # return instance.style.item_template
 
-    # def render(self, context, instance, placeholder):
-    #     context = super(OwlCarouselItemPlugin, self).render(context, instance, placeholder)
-    #     return context
+@plugin_pool.register_plugin
+class ReferenceStoryBlockPlugin(CMSPluginBase):
+    model = ReferenceStoryPlugin
+    name = _("Referene story block plugin")
+    render_template = "_reference_story_block.html"
+    cache = True
+    allow_children = False
+
+
+

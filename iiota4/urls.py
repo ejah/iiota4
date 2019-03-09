@@ -9,6 +9,7 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
+from djangocms_owl_carousel.urls import urlpatterns as owl_patterns
 
 admin.autodiscover()
 
@@ -22,6 +23,7 @@ urlpatterns += i18n_patterns(
     url(r'^', include('cms.urls')),
 )
 
+urlpatterns += owl_patterns
 # This is only needed when using runserver.
 if settings.DEBUG:
     urlpatterns = [

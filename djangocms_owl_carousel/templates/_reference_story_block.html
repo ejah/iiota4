@@ -1,0 +1,18 @@
+{% load cms_tags %}
+
+<div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item {{ instance.story.segments }}">
+    <div class="single-portfolio-style-two">
+        <div class="img-box">
+            <img src="{{ instance.story.image.url }}" alt="Awesome Image"/>
+            <div class="overlay">
+                <div class="box">
+                    <div class="content">
+                        <span>{{ instance.story.title }}</span>
+                        <a href="reference-stories/{{ instance.story.slug }}"><h3>{{ instance.story.title }}</h3></a>
+                        <a href="{{ instance.story.image.url }}" class="img-popup industrio-icon-next"></a>
+                    </div><!-- /.content -->
+                </div><!-- /.box -->
+            </div><!-- /.overlay -->
+        </div><!-- /.img-box -->
+    </div><!-- /.single-portfolio-style-two -->
+</div>

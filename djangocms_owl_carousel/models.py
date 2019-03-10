@@ -162,7 +162,7 @@ class ReferenceStory(models.Model):
     text = models.TextField()
     account = models.CharField(max_length=75)
     quote = models.TextField(max_length=200)
-    slug = models.SlugField()
+    slug = models.SlugField(editable=False)
 
     class Meta:
         verbose_name_plural = "Reference Stories"
@@ -172,8 +172,8 @@ class ReferenceStory(models.Model):
         segment_classes = str(" ").join(item.name for item in self.segment.all())
         return segment_classes
 
-    # def get_absolute_url(self):
-    #     return reverse("reference_detail", kwargs={"slug": self.slug})
+    def get_absolute_url(self):
+        return reverse("reference_detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return self.title

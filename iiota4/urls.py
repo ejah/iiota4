@@ -19,11 +19,12 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
+    url(r'^', include('djangocms_owl_carousel.urls')),
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
 )
 
-urlpatterns += owl_patterns
+
 # This is only needed when using runserver.
 if settings.DEBUG:
     urlpatterns = [

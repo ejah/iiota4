@@ -141,6 +141,7 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'djangocms_owl_carousel',
+    'reference_stories',
     'iiota4'
 )
 

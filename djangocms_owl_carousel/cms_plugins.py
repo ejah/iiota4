@@ -4,7 +4,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib.admin import StackedInline
 from djangocms_owl_carousel.models import CarouselHolder, CarouselItem, OwlCarouselHolder, OwlCarouselItem, \
-    OWL_STYLE_CHOICES, OwlStyles, ReferenceStoryPlugin
+    OWL_STYLE_CHOICES, OwlStyles
+from reference_stories.cms_plugins import ReferenceStoryPlugin
 
 
 class OwlStyleStackedInline(StackedInline):
@@ -69,13 +70,7 @@ class OwlCarouselItemPlugin(CMSPluginBase):
         return testje
         # return instance.style.item_template
 
-@plugin_pool.register_plugin
-class ReferenceStoryBlockPlugin(CMSPluginBase):
-    model = ReferenceStoryPlugin
-    name = _("Referene story block plugin")
-    render_template = "_reference_story_block.html"
-    cache = True
-    allow_children = False
+
 
 
 

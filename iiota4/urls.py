@@ -9,7 +9,6 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
-from djangocms_owl_carousel.urls import urlpatterns as owl_patterns
 
 admin.autodiscover()
 
@@ -19,7 +18,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^', include('djangocms_owl_carousel.urls')),
+    # url(r'^', include('reference_stories.urls')),
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
 )

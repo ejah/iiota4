@@ -15,6 +15,7 @@ class MarketSegment(models.Model):
     def __str__(self):
         return self.name
 
+
 class ReferenceStory(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False)
     image = models.ImageField()
@@ -33,7 +34,7 @@ class ReferenceStory(models.Model):
         return segment_classes
 
     def get_absolute_url(self):
-        return reverse("reference_detail", kwargs={"slug": self.slug})
+        return reverse("ref_stories:reference_detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return self.title

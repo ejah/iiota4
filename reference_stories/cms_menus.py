@@ -21,4 +21,8 @@ class ReferenceStoriesMenu(CMSAttachMenu):
             )
             nodes.append(node)
         return nodes
-menu_pool.register_menu(ReferenceStoriesMenu) # register the menu.
+
+
+# register the menu.
+menu_pool.register_menu(ReferenceStoriesMenu)
+

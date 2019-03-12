@@ -1,0 +1,38 @@
+{% load cms_tags static i18n %}
+<div class="container">
+    <div class="logo pull-left">
+        <a href="/"><img src="{% static 'img/Logo_iiota_alt_new.png' %}" alt="IIOTA Logo"/></a>
+    </div><!-- /.logo -->
+    <div class="header-right-info pull-right">
+        <div class="single-header-right-info">
+            <div class="icon-box">
+                <i class="industrio-icon-phone-call"></i>
+            </div><!-- /.icon-box -->
+            <div class="text-box">
+                <p>{% trans "Bel ons tussen 9.00 en 17.00 uur" %}</p>
+                <h3><a href="tel:+31622785658">+31 6 22785658</a></h3>
+                {% static_placeholder "icon_box_tel" %}
+            </div><!-- /.text-box -->
+        </div><!-- /.single-header-right-info -->
+        <div class="single-header-right-info">
+            <div class="icon-box">
+                <i class="industrio-icon-clock"></i>
+            </div><!-- /.icon-box -->
+            <div class="text-box">
+                <p>{% trans "Maandag tot en met vrijdag" %}</p>
+                <h3>9.00 - 17.00</h3>
+                {% static_placeholder "icon_box_clock" %}
+            </div><!-- /.text-box -->
+        </div><!-- /.single-header-right-info -->
+        <div class="single-header-right-info">
+            <div class="icon-box">
+                <i class="industrio-icon-envelope"></i>
+            </div><!-- /.icon-box -->
+            <div class="text-box">
+                <p>{% trans "Mail ons" %}</p>
+                <h3><a href="mailto:info@iiota.nl">info@iiota.nl</a></h3>
+                {% static_placeholder "icon_box_mail" %}
+            </div><!-- /.text-box -->
+        </div><!-- /.single-header-right-info -->
+    </div><!-- /.header-right-info -->
+</div><!-- /.container -->

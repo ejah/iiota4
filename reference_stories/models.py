@@ -17,12 +17,24 @@ class MarketSegment(models.Model):
 
 
 class ReferenceStory(models.Model):
-    title = models.CharField(max_length=100, null=False, blank=False)
-    image = models.ImageField()
+    title = models.CharField(verbose_name='Title of reference', max_length=100, null=False, blank=False)
+    image = models.ImageField(verbose_name='Reference image')
     segment = models.ManyToManyField(MarketSegment, related_name='ReferenceStories')
-    text = models.TextField()
-    account = models.CharField(max_length=75)
-    quote = models.TextField(max_length=200)
+    text = models.TextField(verbose_name='Reference body text')
+    account = models.CharField(verbose_name='Account name', max_length=75)
+    account_url = models.URLField(verbose_name="Account website", null=True)
+    reference_name = models.CharField(verbose_name='Name of person for quote', max_length=75, null=True)
+    quote = models.TextField(max_length=200, null=True)
+    complexity = models.IntegerField(verbose_name='Project complexity', null=True)
+    date_completed = models.DateField(auto_now_add=True)
+    last_modified = models.DateField(auto_now=True)
+    challenge = models.TextField(verbose_name='The challenge of this project', null=True)
+    businesscase = models.TextField(verbose_name='Describe the businesscase', null=True)
+    solution = models.TextField(verbose_name='Describe the solution', null=True)
+    challenge_image = models.ImageField(verbose_name='Challenge image', null=True)
+    businesscase_image = models.ImageField(verbose_name='Businesscase image', null=True)
+    solution_image = models.ImageField(verbose_name='Solution image', null=True)
+
     slug = models.SlugField(editable=False)
 
     class Meta:

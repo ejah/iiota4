@@ -1,5 +1,6 @@
 import os  # isort:skip
 from django.utils.translation import ugettext_lazy as _
+
 gettext = lambda s: s
 
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -20,7 +21,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -31,7 +31,6 @@ SECRET_KEY = '=8+fj^7j$i4iemxc&b_e_fet70&87!+)!_j%(l)4zj5_m@r&6j'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -50,7 +49,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
@@ -64,11 +62,10 @@ STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'iiota4', 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'iiota4', 'templates'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -91,7 +88,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 MIDDLEWARE = (
     'cms.middleware.utils.ApphookReloadMiddleware',
@@ -125,6 +121,15 @@ INSTALLED_APPS = (
     'djangocms_text_ckeditor',
     'filer',
     'easy_thumbnails',
+    'aldryn_apphooks_config',
+    'aldryn_categories',
+    'aldryn_common',
+    'aldryn_newsblog',
+    'aldryn_people',
+    'aldryn_translation_tools',
+    'parler',
+    'sortedm2m',
+    'taggit',
     'djangocms_column',
     'djangocms_file',
     'djangocms_link',
@@ -165,6 +170,7 @@ CMS_TEMPLATES = (
     ## Customize this
     ('index_iiota.html', 'Home'),
     ('iiota-single-service.html', 'Service'),
+    ('iiota_blog.html', 'Blog landing'),
 )
 
 CMS_PERMISSION = True
@@ -184,7 +190,7 @@ DATABASES = {
 }
 
 MIGRATION_MODULES = {
-    
+
 }
 
 THUMBNAIL_PROCESSORS = (

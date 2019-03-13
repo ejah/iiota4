@@ -2,14 +2,7 @@
 {% load static cms_tags menu_tags i18n %}
 
 {% block content %}
-    <div class="inner-banner">
-        <div class="container">
-            <h3>{% page_attribute 'title' %}</h3>
-            <ul class="breadcumb">
-                {% show_breadcrumb %}
-            </ul><!-- /.breadcumb -->
-        </div><!-- /.container -->
-    </div><!-- /.inner-banner -->
+   {% include "__breadcrumbs.html" %}
     
     <section class="service-page service-details-page">
         <div class="container">

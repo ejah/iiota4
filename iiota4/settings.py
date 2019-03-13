@@ -170,7 +170,7 @@ CMS_TEMPLATES = (
     ## Customize this
     ('index_iiota.html', 'Home'),
     ('iiota-single-service.html', 'Service'),
-    ('iiota_blog.html', 'Blog landing'),
+    ('iiota-blog.html', 'Blog landing'),
 )
 
 CMS_PERMISSION = True

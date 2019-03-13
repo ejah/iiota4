@@ -42,7 +42,7 @@
     {% block content %}{% endblock content %}
 </div><!-- /.page-wrapper -->
 
-{% include "industrio-html-files/footer.html" %}
+{% include "footer.html" %}
 
 <section class="hidden-sidebar side-navigation">
     <a href="#" class="close-button side-navigation-close-btn fa fa-times"></a><!-- /.close-button -->
@@ -52,51 +52,7 @@
         </div><!-- /.top-content -->
         <nav class="nav-menu middle-content">
             <ul class="navigation-box">
-                <li class="current">
-                    <a href="base_one.html">Home <span class="subnav-toggler fa fa-caret-down"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="base_one.html">Home Page One</a></li>
-                        <li><a href="industrio-html-files/index2.html">Home Page Two</a></li>
-                        <li><a href="industrio-html-files/index3.html">Home Page Three</a></li>
-                    </ul><!-- /.sub-menu -->
-                </li>
-                <li><a href="industrio-html-files/about.html">About Us</a></li>
-                <li>
-                    <a href="industrio-html-files/service.html">Services <span class="subnav-toggler fa fa-caret-down"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="iiota-single-service.html">Chemical Research</a></li>
-                        <li><a href="iiota-single-service.html">Fuel & Gas Management</a></li>
-                        <li><a href="iiota-single-service.html">Eco & Bio Power</a></li>
-                        <li><a href="iiota-single-service.html">Mechanical Engineering</a></li>
-                        <li><a href="iiota-single-service.html">Petroleum Refinery</a></li>
-                        <li><a href="iiota-single-service.html">Power & Energy Sector</a></li>
-                    </ul><!-- /.sub-menu -->
-                </li>
-                <li>
-                    <a href="industrio-html-files/project.html">Projects <span class="subnav-toggler fa fa-caret-down"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="industrio-html-files/single-project.html">Project Details</a></li>
-                    </ul><!-- /.sub-menu -->
-                </li>
-                <li>
-                    <a href="#">Pages <span class="subnav-toggler fa fa-caret-down"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="industrio-html-files/404.html">Error 404</a></li>
-                        <li><a href="industrio-html-files/coming-soon.html">Coming Soon</a></li>
-                        <li><a href="industrio-html-files/project.html">Projects</a></li>
-                        <li><a href="industrio-html-files/single-project.html">Project Details</a></li>
-                        <li><a href="industrio-html-files/team.html">Team</a></li>
-                        <li><a href="industrio-html-files/testimonials.html">Testimonials</a></li>
-                    </ul><!-- /.sub-menu -->
-                </li>
-                <li>
-                    <a href="industrio-html-files/blog.html">Blog <span class="subnav-toggler fa fa-caret-down"></span></a>
-                    <ul class="sub-menu">
-                        <li><a href="industrio-html-files/blog.html">Blog Classic</a></li>
-                        <li><a href="industrio-html-files/blog-details.html">Blog Details</a></li>
-                    </ul><!-- /.sub-menu -->
-                </li>
-                <li><a href="industrio-html-files/contact.html">Contact Us</a></li>
+                {% show_menu 0 100 100 100 'menu.html' %}
             </ul>
         </nav><!-- /.nav-menu -->
         <div class="bottom-content">

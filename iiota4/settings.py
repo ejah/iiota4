@@ -35,14 +35,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-
-
-
-
 ROOT_URLCONF = 'iiota4.urls'
-
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -170,11 +163,8 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    ('industrio-html-files/index_iiota.html', 'Home'),
-    ('industrio-html-files/iiota-single-service.html', 'Single'),
-    ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('index_iiota.html', 'Home'),
+    ('iiota-single-service.html', 'Service'),
 )
 
 CMS_PERMISSION = True

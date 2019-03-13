@@ -33,13 +33,13 @@
     {% render_block "css" %}
 </head>
 <body class="_active-preloader-ovh">
-{% cms_toolbar %}
+    {% cms_toolbar %}
 <div class="preloader">
     <div class="spinner"></div>
 </div> <!-- /.preloader -->
 <div class="page-wrapper">
-{% block header_content %}{% endblock header_content %}
-{% block content %}{% endblock content %}
+    {% block header_content %}{% endblock header_content %}
+    {% block content %}{% endblock content %}
 </div><!-- /.page-wrapper -->
 
 {% include "industrio-html-files/footer.html" %}

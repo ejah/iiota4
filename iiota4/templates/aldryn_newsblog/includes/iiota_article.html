@@ -1,48 +1,63 @@
 {% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+{#                    <div class="single-blog-style-two">#}
+{#                        <div class="img-box">#}
+{#                            <img src="img/blog-2-1.jpg" alt="Awesome Image"/>#}
+{#                        </div><!-- /.img-box -->#}
+{#                        <div class="text-box">#}
+{#                            <a href="#"><h3>Australia’s provider of industry-based research</h3></a>#}
+{#                            <div class="meta-info">#}
+{#                                <a href="#"><i class="fa fa-user"></i> Admin</a>#}
+{#                                <a href="#"><i class="fa fa-calendar"></i> July 15, 2019</a>#}
+{#                                <a href="#"><i class="fa fa-comments"></i> 2 Comments</a>#}
+{#                                <a href="#"><i class="fa fa-tags"></i> Business Study, Management </a>#}
+{#                            </div><!-- /.meta-info -->#}
+{#                            <p>It’s no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencie, responding to the new possibilitie available. However, the in the industry come is fast becoming overcrowded, heaving with agencies offering similar services .</p>#}
+{#                            <a href="#" class="more hvr-sweep-to-right">View details</a>#}
+{#                        </div><!-- /.text-box -->#}
+{#                    </div><!-- /.single-blog-style-two -->#}
 
-<article class="article
+
+<div class="single-blog-style-two
     {% if article.is_featured %} featured{% endif %}
     {% if not article.published %} unpublished{% endif %}">
 
     {# The image is only shown on the detail view by using the condition "and detail_view" #}
-    {% if article.featured_image_id and detail_view %}
-        <p>
-            <img src="{% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
-        </p>
+    {% if article.featured_image_id %}
+        <div class="img-box">
+            <img src="{% thumbnail article.featured_image 835x385 crop subject_location=article.featured_image.subject_location %}"
+                 alt="{{ article.featured_image.alt }}">
+        </div>
     {% endif %}
-
-    {% if article.categories.exists %}
-        <p>
-            {% for category in article.categories.all %}
-                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
-                {% if not forloop.last %}, {% endif %}
-            {% endfor %}
-        </p>
-    {% endif %}
-
-    <h2>
+    <div class="text-box">
         {% if not detail_view %}
-            <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>
+            <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}"><h3>{% render_model article "title" %}</h3></a>
         {% else %}
-            {% render_model article "title" %}
+            <h3>{% render_model article "title" %}</h3>
         {% endif %}
-    </h2>
+        <div class="meta-info">
+            <a href={% namespace_url "article-list-by-author" author.slug namespace=namespace default='' %}><i
+                    class="fa fa-user"></i> {{ article.author.name }}</a>
+            <a href="#"><i class="fa fa-calendar"></i>{{ article.publishing_date|date }}</a>
+            {% if article.categories.exists %}
+                {% for category in article.categories.all %}
+                    <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">
+                        {% if forloop.first %}<i class="fa fa-tags"></i>{% endif %}{{ category.name }}</a>
+                    {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% render_model article "lead_in" %}
+            {% if detail_view %}
+                {% render_placeholder article.content language placeholder_language %}
+            {% endif %}
+        </div>
+    </div>
 
-    <p>{{ article.publishing_date|date }}</p>
+    {#    {% if article.tags %}#}
+    {#        <p>#}
+    {#            {% for tag in article.tags.all %}#}
+    {#                <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">{{ tag.name }}</a>#}
+    {#            {% endfor %}#}
+    {#        </p>#}
+    {#    {% endif %}#}
 
-    {% include "aldryn_newsblog/includes/author.html" with author=article.author %}
-
-    {% if article.tags %}
-        <p>
-            {% for tag in article.tags.all %}
-                <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">{{ tag.name }}</a>
-            {% endfor %}
-        </p>
-    {% endif %}
-
-    {% render_model article "lead_in" %}
-
-    {% if detail_view %}
-        {% render_placeholder article.content language placeholder_language %}
-    {% endif %}
-</article>
+</div>

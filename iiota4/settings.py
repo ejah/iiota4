@@ -90,6 +90,7 @@ TEMPLATES = [
 ]
 
 MIDDLEWARE = (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -101,7 +102,7 @@ MIDDLEWARE = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -114,6 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'debug_toolbar',
     'cms',
     'menus',
     'sekizai',
@@ -204,4 +206,9 @@ DJANGOCMS_LINK_TEMPLATES = [
     ('feature', _('Featured Version')),
     ('welkom', _('Welcome Version')),
     ('service_more', _('More')),
+]
+
+
+INTERNAL_IPS = [
+    '127.0.0.1',
 ]

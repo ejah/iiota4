@@ -1,12 +1,23 @@
 {% load i18n cms_tags apphooks_config_tags %}
 
-{% if current_page.url == '/' %}
-    <p>gelukt</p>
-{% endif %}
-
 {% for article in article_list %}
-    <div class="single-recent-post">
-        <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}"><h3>{% render_model article "title" %}</h3></a>
+    <div class={{ div_style }}>
+        <a href="{% namespace_url 'article-detail' article.slug namespace='aldryn_newsblog' default='' %}">
+            <h3>{% render_model article "title" %}</h3></a>
+{#.blog-style-one .blog-list-sidebar .single-blog-list .cat-list a#}
+{#    .single-sidebar .recent-post-list .single-recent-post .cat-list#}
+
+        <div class="cat-list">
+            <a href="{% namespace_url 'article-list-by-month' year=article.publishing_date.year month=article.publishing_date.month namespace='aldryn_newsblog' default='' %}"><i class="fa fa-calendar"></i> {{ article.publishing_date|date }} </a>
+            {% if article.categories.exists %}
+                {% for category in article.categories.all %}
+                    <a href="{% namespace_url 'article-list-by-category' category.slug namespace='aldryn_newsblog' default='' %}">
+                        {% if forloop.first %}<i class="fa fa-tags"></i> {% endif %}{{ category.name }}</a>
+                    {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+
+            {% endif %}
+         </div>
     </div><!-- /.single-recent-post -->
 {% empty %}
     <h3>{% trans "No items available" %}</h3>

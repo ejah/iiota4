@@ -94,6 +94,7 @@
             </div><!-- /.sec-title -->
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12">
+                    {% placeholder 'blog_block_left' %}
                     <div class="single-blog-style-one">
                         <div class="img-box">
                             <img src="{% static 'img/blog-1-1.jpg' %}" alt="Awesome Image"/>
@@ -109,6 +110,7 @@
                     </div><!-- /.single-blog-style-one -->
                 </div><!-- /.col-md-4 -->
                 <div class="col-md-4 col-sm-6 col-xs-12">
+                    {% placeholder 'blog_block_right' %}
                     <div class="single-blog-style-one">
                         <div class="img-box">
                             <img src="{% static 'img/blog-1-2.jpg' %}" alt="Awesome Image"/>
@@ -126,7 +128,8 @@
                 </div><!-- /.col-md-4 -->
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="blog-list-sidebar">
-                            {% placeholder "blog_list_side" %}
+                        {% with "single-blog-list" as div_style %}
+                            {% placeholder "blog_list_side" %}{% endwith %}
 {#                        <div class="single-blog-list">#}
 {#                            <a href="industrio-html-files/blog-details.html"><h3>Start it as an S corporation, unless you have to issue#}
 {#                                stock...</h3></a>#}

@@ -1,0 +1,29 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags %}
+
+<div class="single-blog-style-one">
+    {% if article.featured_image_id %}
+        <div class="img-box">
+            <img src="{% thumbnail article.featured_image 370x194 crop subject_location=article.featured_image.subject_location %}"
+                 alt="{{ article.featured_image.alt }}">
+        </div>
+    {% endif %}
+    <div class="meta-info">
+        <a class="date-box"
+           href="{% namespace_url 'article-list-by-month' year=article.publishing_date.year month=article.publishing_date.month namespace='aldryn_newsblog' default='' %}"><i
+                class="fa fa-calendar"></i> {{ article.publishing_date|date }} </a>
+        {% if article.categories.exists %}
+            {% for category in article.categories.all %}
+                <a class="category"
+                   href="{% namespace_url 'article-list-by-category' category.slug namespace='aldryn_newsblog' default='' %}">
+                    {% if forloop.first %}<i class="fa fa-tags"></i> {% endif %}{{ category.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div><!-- /.meta-info -->
+    <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">
+        <h3>{% render_model article "title" %}</h3></a>
+    {% render_model article "lead_in" %}
+    <a class='read-more'
+       href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% trans 'Read more' %}
+        <i class="fa fa-angle-double-right"></i></a>
+</div><!-- /.single-blog-style-one -->

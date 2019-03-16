@@ -21,7 +21,8 @@
                                 <h3>Recent Post</h3>
                             </div><!-- /.title -->
                             <div class="recent-post-list">
-                                {% placeholder "latest_articles_blog" %}
+                                {% with 'single-recent-post' as div_style %}
+                                {% placeholder "latest_articles_blog" %}{% endwith %}
                             </div><!-- /.recent-post-list -->
                         </div><!-- /.single-sidebar -->
                         <div class="single-sidebar category-widget">

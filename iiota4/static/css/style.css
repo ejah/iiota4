@@ -1998,7 +1998,8 @@ footer.site-footer .bottom-footer p {
   margin-bottom: 4px;
   margin-top: 7px;
 }
-.blog-style-one .blog-list-sidebar .single-blog-list .cat-list a {
+.blog-style-one .blog-list-sidebar .single-blog-list .cat-list a,
+.single-sidebar .recent-post-list .single-recent-post .cat-list a {
   font-size: 16px;
   color: #888888;
   line-height: 1em;

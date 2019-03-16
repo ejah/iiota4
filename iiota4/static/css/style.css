@@ -3854,7 +3854,7 @@ footer.site-footer .bottom-footer p {
   cursor: pointer;
   line-height: 25px;
   position: relative;
-  padding: 17px 37px;
+    padding: 17px 35px;
 }
 .portfolio-style-two .gallery-filter ul li span:after {
   content: '';
@@ -3873,7 +3873,7 @@ footer.site-footer .bottom-footer p {
   font-size: 25px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 13px;
+    margin-right: 10px;
 }
 .portfolio-style-two .gallery-filter ul li.active span {
   color: #FE5A0E;

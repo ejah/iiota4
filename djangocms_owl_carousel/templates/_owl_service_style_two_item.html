@@ -1,8 +1,8 @@
-{% load cms_tags %}
+{% load cms_tags thumbnail %}
 <div class="item">
     <div class="single-service-style-two">
         <div class="img-box">
-            <img src="{{ instance.image.url }}" alt="{{ instance.alt_text }}"/>
+            <img src="{% thumbnail instance.image 369x249 crop %}" alt="{{ instance.alt_text }}"/>
         </div><!-- /.img-box -->
         <div class="overlay">
             <div class="box">

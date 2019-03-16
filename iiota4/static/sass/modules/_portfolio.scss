@@ -5,9 +5,25 @@
 		margin-bottom: 60px;
 		ul {margin: 0;padding: 0; list-style: none;text-align: center;border-top: 1px solid #e3dfdf;
 			li {display: inline-block;vertical-align: middle;
-				span {display: block;color: #262626;font-size: 16px;font-weight: 600;font-family: 'Poppins';cursor: pointer;line-height: 25px;position: relative;padding: 17px 37px;
+
+              span {
+                display: block;
+                color: #262626;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: 'Poppins';
+                cursor: pointer;
+                line-height: 25px;
+                position: relative;
+                padding: 17px 35px;
 					&:after {content: '';position: absolute;bottom:100%;left: 0;width: 100%;height: 3px;background:#FE5A0E;transform: scale(0);transition: all .4s ease;}
-					i {font-size: 25px;display: inline-block;vertical-align: middle;margin-right: 13px;}
+
+                i {
+                  font-size: 25px;
+                  display: inline-block;
+                  vertical-align: middle;
+                  margin-right: 10px;
+                }
 				}
 				&.active {
 					span {color: #FE5A0E;

@@ -1,9 +1,9 @@
-{% load cms_tags %}
+{% load cms_tags thumbnail %}
 
 <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item {{ instance.story.segments }}">
     <div class="single-portfolio-style-two">
         <div class="img-box">
-            <img src="{{ instance.story.image.url }}" alt="Awesome Image"/>
+            <img src="{% thumbnail instance.story.image 403x292 crop %}" alt="{{ instance.story.title }}"/>
             <div class="overlay">
                 <div class="box">
                     <div class="content">

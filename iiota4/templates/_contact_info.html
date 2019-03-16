@@ -1,21 +1,38 @@
 {% load cms_tags i18n %}
-<div class="contact-infos">
-    <div class="single-contact-infos">
-        <div class="icon-box">
-            <i class="industrio-icon-phone-call"></i>
-        </div><!-- /.icon-box -->
-        <div class="text-box">
-            <h3>{% trans "Call us on" %}</h3>
-            <p><a href="tel:+31622785658">+31 6 22785658</a></p>
-        </div><!-- /.text-box -->
-    </div><!-- /.single-contact-infos -->
-    <div class="single-contact-infos">
-        <div class="icon-box">
-            <i class="industrio-icon-envelope"></i>
-        </div><!-- /.icon-box -->
-        <div class="text-box">
-            <h3>{% trans "Email us" %}</h3>
-            <p><a href="mailto:info@iiota.nl">info@iiota.nl</a></p>
-        </div><!-- /.text-box -->
-    </div><!-- /.single-contact-infos -->
-</div><!-- /.contact-infos -->
+
+<section class="contact-info-style-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="title">
+                    {% placeholder "contact_bar_text" %}
+                    {#                        <h3>Get in Touch</h3>#}
+                    {#                        <p>You will find yourself working in a true partnership that results in an incredible#}
+                    {#                            experience, and an end product that is the best.</p>#}
+                </div><!-- /.title -->
+            </div><!-- /.col-md-7 -->
+            <div class="col-md-6">
+                <div class="contact-infos">
+                    <div class="single-contact-infos">
+                        <div class="icon-box">
+                            <i class="industrio-icon-phone-call"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <h3>{% trans "Call us on" %}</h3>
+                            <p><a href="tel:+31622785658">+31 6 22785658</a></p>
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-contact-infos -->
+                    <div class="single-contact-infos">
+                        <div class="icon-box">
+                            <i class="industrio-icon-envelope"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <h3>{% trans "Email us" %}</h3>
+                            <p><a href="mailto:info@iiota.nl">info@iiota.nl</a></p>
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-contact-infos -->
+                </div><!-- /.contact-infos -->
+            </div><!-- /.col-md-5 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.contact-info-style-one -->

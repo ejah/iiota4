@@ -173,6 +173,8 @@ CMS_TEMPLATES = (
     ('index_iiota.html', 'Home'),
     ('iiota-single-service.html', 'Service'),
     ('iiota-blog.html', 'Blog landing'),
+    ('about.html', _('About')),
+    ('project.html', _('Project')),
 )
 
 CMS_PERMISSION = True

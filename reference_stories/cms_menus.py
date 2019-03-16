@@ -16,7 +16,7 @@ class ReferenceStoriesMenu(CMSAttachMenu):
         for reference in ReferenceStory.objects.all():
             node = NavigationNode(
                 title=reference.title,
-                url=reverse('ref_stories:reference_detail', kwargs={'slug':reference.slug}),
+                url=reverse('ref_stories:reference-detail', kwargs={'slug':reference.slug}),
                 id=reference.slug
             )
             nodes.append(node)

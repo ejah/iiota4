@@ -57,30 +57,10 @@
         <div class="container">
             <div class="sec-title text-center">
                 <h3>{% trans "Interesting projects that might inspire you" %}</h3>
-{#                <p>You will find yourself working in a true partnership that results in an incredible <br/> experience,#}
-{#                    and an end product that is the best. </p>#}
+                {#                <p>You will find yourself working in a true partnership that results in an incredible <br/> experience,#}
+                {#                    and an end product that is the best. </p>#}
             </div><!-- /.sec-title -->
-            <div class="gallery-filter">
-                <ul class="post-filter masonary text-center">
-                    <li class="filter active" data-filter=".masonary-item"><span><i class="industrio-icon-layers"></i>{% trans "All Cases" %}</span>
-                    </li><!--
-                    -->
-                    <li class="filter " data-filter=".oil"><span><i class="industrio-icon-drop-of-liquid"></i>{% trans "Oil & Gas" %}</span>
-                    </li><!--
-                    -->
-                    <li class="filter " data-filter=".construction"><span><i class="industrio-icon-safety"></i>{% trans "Construction" %}</span>
-                    </li><!--
-                    -->
-                    <li class="filter " data-filter=".chemical"><span><i class="industrio-icon-atom"></i>{% trans "Chemical" %}</span>
-                    </li><!--
-                    -->
-                    <li class="filter " data-filter=".industrial"><span><i class="industrio-icon-settings"></i>{% trans "Industrial" %}</span>
-                    </li><!--
-                    -->
-                    <li class="filter " data-filter=".agriculture"><span><i class="industrio-icon-scythe"></i>{% trans "Agriculture" %}</span>
-                    </li>
-                </ul><!-- /.post-filter -->
-            </div><!-- /.gallery-filter -->
+            {% include '__galery_filter.html' %}
             <div class="row masonary-layout filter-layout" data-filter-class="filter">
                 {% placeholder "reference_stories" %}
             </div>
@@ -93,100 +73,68 @@
                 <h3>Latest Blog</h3>
             </div><!-- /.sec-title -->
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    {% placeholder 'blog_block_left' %}
-                    <div class="single-blog-style-one">
-                        <div class="img-box">
-                            <img src="{% static 'img/blog-1-1.jpg' %}" alt="Awesome Image"/>
-                        </div><!-- /.img-box -->
-                        <div class="meta-info">
-                            <a href="#" class="date-box">24th August 2019</a>
-                            <a href="#" class="category">Business Study, Management</a>
-                        </div><!-- /.meta-info -->
-                        <a href="industrio-html-files/blog-details.html"><h3>Collaboration through advanced technlogy touch base UI </h3></a>
-                        <p>Baseline the procedure and samepage your department. Golden goose. Social currency. Those
-                            options are already baked in with this model run it up the flagpole.</p>
-                        <a href="industrio-html-files/blog-details.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                    </div><!-- /.single-blog-style-one -->
-                </div><!-- /.col-md-4 -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    {% placeholder 'blog_block_right' %}
-                    <div class="single-blog-style-one">
-                        <div class="img-box">
-                            <img src="{% static 'img/blog-1-2.jpg' %}" alt="Awesome Image"/>
-                        </div><!-- /.img-box -->
-                        <div class="meta-info">
-                            <a href="#" class="date-box">24th August 2019</a>
-                            <a href="#" class="category">Business Study, Management</a>
-                        </div><!-- /.meta-info -->
-                        <a href="industrio-html-files/blog-details.html"><h3>Lean into that problem proceduralize. Blue money this proposal
-                            is</h3></a>
-                        <p>In an ideal world i also believe it's important for every member to be involved and invested
-                            in our company and this is one way to do so anti-pattern, commitment to the</p>
-                        <a href="industrio-html-files/blog-details.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a>
-                    </div><!-- /.single-blog-style-one -->
-                </div><!-- /.col-md-4 -->
+                {% placeholder 'blog_block_left' %}
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="blog-list-sidebar">
                         {% with "single-blog-list" as div_style %}
                             {% placeholder "blog_list_side" %}{% endwith %}
-{#                        <div class="single-blog-list">#}
-{#                            <a href="industrio-html-files/blog-details.html"><h3>Start it as an S corporation, unless you have to issue#}
-{#                                stock...</h3></a>#}
-{#                            <p>24th August 2019</p>#}
-{#                            <div class="cat-list"><a href="#">Business Study,</a><a href="#">Management</a></div>#}
-{#                            <!-- /.cat-list -->#}
-{#                        </div><!-- /.single-blog-list -->#}
-{#                        <div class="single-blog-list">#}
-{#                            <a href="industrio-html-files/blog-details.html"><h3>The standard answer to this is Delaware because of its#}
-{#                                wellfare</h3></a>#}
-{#                            <p>24th August 2019</p>#}
-{#                            <div class="cat-list"><a href="#">Business Study,</a><a href="#">Management</a></div>#}
-{#                            <!-- /.cat-list -->#}
-{#                        </div><!-- /.single-blog-list -->#}
-{#                        <div class="single-blog-list">#}
-{#                            <a href="industrio-html-files/blog-details.html"><h3>As much as you can reasonably afford, and in an amount#}
-{#                                to...</h3></a>#}
-{#                            <p>24th August 2019</p>#}
-{#                            <div class="cat-list"><a href="#">Business Study,</a><a href="#">Management</a></div>#}
-{#                            <!-- /.cat-list -->#}
-{#                        </div><!-- /.single-blog-list -->#}
-{#                        <div class="btn-box">#}
-{#                            <a href="industrio-html-files/blog.html">Read more <i class="fa fa-arrow-right"></i></a>#}
-{#                        </div><!-- /.btn-box -->#}
+                        {#                        <div class="single-blog-list">#}
+                        {#                            <a href="industrio-html-files/blog-details.html"><h3>Start it as an S corporation, unless you have to issue#}
+                        {#                                stock...</h3></a>#}
+                        {#                            <p>24th August 2019</p>#}
+                        {#                            <div class="cat-list"><a href="#">Business Study,</a><a href="#">Management</a></div>#}
+                        {#                            <!-- /.cat-list -->#}
+                        {#                        </div><!-- /.single-blog-list -->#}
+                        {#                        <div class="single-blog-list">#}
+                        {#                            <a href="industrio-html-files/blog-details.html"><h3>The standard answer to this is Delaware because of its#}
+                        {#                                wellfare</h3></a>#}
+                        {#                            <p>24th August 2019</p>#}
+                        {#                            <div class="cat-list"><a href="#">Business Study,</a><a href="#">Management</a></div>#}
+                        {#                            <!-- /.cat-list -->#}
+                        {#                        </div><!-- /.single-blog-list -->#}
+                        {#                        <div class="single-blog-list">#}
+                        {#                            <a href="industrio-html-files/blog-details.html"><h3>As much as you can reasonably afford, and in an amount#}
+                        {#                                to...</h3></a>#}
+                        {#                            <p>24th August 2019</p>#}
+                        {#                            <div class="cat-list"><a href="#">Business Study,</a><a href="#">Management</a></div>#}
+                        {#                            <!-- /.cat-list -->#}
+                        {#                        </div><!-- /.single-blog-list -->#}
+                        {#                        <div class="btn-box">#}
+                        {#                            <a href="industrio-html-files/blog.html">Read more <i class="fa fa-arrow-right"></i></a>#}
+                        {#                        </div><!-- /.btn-box -->#}
                     </div><!-- /.blog-list-sidebar -->
                 </div><!-- /.col-md-4 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.blog-style-one -->
 
-{#    <section class="brand-carousel-area">#}
-{#        <div class="container">#}
-{#            <div class="brand-carousel owl-carousel owl-theme">#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-codecanyon"></i>#}
-{#                </div><!-- /.item -->#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-envato"></i>#}
-{#                </div><!-- /.item -->#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-graphicriver"></i>#}
-{#                </div><!-- /.item -->#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-photodune"></i>#}
-{#                </div><!-- /.item -->#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-themeforest"></i>#}
-{#                </div><!-- /.item -->#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-videohive"></i>#}
-{#                </div><!-- /.item -->#}
-{#                <div class="item">#}
-{#                    <i class="brands-icon-audiojungle"></i>#}
-{#                </div><!-- /.item -->#}
-{#            </div><!-- /.brand-carousel owl-carousel owl-theme -->#}
-{#        </div><!-- /.container -->#}
-{#    </section><!-- /.brand-carousel-area -->#}
+    {#    <section class="brand-carousel-area">#}
+    {#        <div class="container">#}
+    {#            <div class="brand-carousel owl-carousel owl-theme">#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-codecanyon"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-envato"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-graphicriver"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-photodune"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-themeforest"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-videohive"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#                <div class="item">#}
+    {#                    <i class="brands-icon-audiojungle"></i>#}
+    {#                </div><!-- /.item -->#}
+    {#            </div><!-- /.brand-carousel owl-carousel owl-theme -->#}
+    {#        </div><!-- /.container -->#}
+    {#    </section><!-- /.brand-carousel-area -->#}
 
     <section class="award-winning">
         <div class="container">

@@ -1,0 +1,99 @@
+{% extends "base_three.html" %}
+{% load static cms_tags menu_tags i18n thumbnail %}
+
+{% block content %}
+    {% include "__breadcrumbs.html" %}
+
+    <section class="portfolio-style-two sec-pad">
+        <div class="container">
+            {% include '__galery_filter.html' %}
+            <div class="row masonary-layout filter-layout" data-filter-class="filter">
+                {% for story in reference_list %}
+                    <div class="col-md-3 col-sm-6 col-xs-12 masonary-item single-filter-item {{ story.segments }} ">
+                        <div class="single-portfolio-style-two">
+                            <div class="img-box">
+                                <img src="{% thumbnail story.image 265x201 crop subject_location=story.image.subject_location %}"
+                                     alt="{{ story.title }}"/>
+                                <div class="overlay">
+                                    <div class="box">
+                                        <div class="content">
+                                            <span>{{ story.account }}</span>
+                                            <a href="{% url 'ref_stories:reference-detail' slug=story.slug %}"><h3>{{ story.title }}</h3></a>
+                                            <a href="{% url 'ref_stories:reference-detail' slug=story.slug %}"
+                                               class="img-popup industrio-icon-next"></a>
+                                        </div><!-- /.content -->
+                                    </div><!-- /.box -->
+                                </div><!-- /.overlay -->
+                            </div><!-- /.img-box -->
+                        </div><!-- /.single-portfolio-style-two -->
+                    </div>
+                {% endfor %}
+            </div>
+        </div><!-- /.container -->
+    </section><!-- /.project-style-one -->
+
+    <section class="contact-info-style-two">
+        <div class="container-fluid">
+            <div class="col-md-6">
+                <div class="left-content">
+                    <div class="inner">
+                        <h3>We provide full range of Premium Industrial Services for your business</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                            Laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h4>Get Connected With Us:</h4>
+                        <div class="social">
+                            <a href="#" class="fab fa-facebook"></a>
+                            <a href="#" class="fab fa-twitter-square"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div><!-- /.social -->
+                    </div><!-- /.inner -->
+                </div><!-- /.left-content -->
+            </div><!-- /.col-md-6 -->
+            <div class="col-md-6">
+                <div class="right-video-box">
+                    <a href="//www.youtube.com/watch?v=FxAG_11PzCk" class="video-popup"><i
+                            class="industrio-icon-play-button"></i> Play Video</a>
+                </div><!-- /.right-video-box -->
+            </div><!-- /.col-md-6 -->
+        </div><!-- /.container-fluid -->
+    </section><!-- /.video-box-style-one -->
+
+    <section class="contact-info-style-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title">
+                        <h3>Get in Touch</h3>
+                        <p>You will find yourself working in a true partnership that results in an incredible
+                            experience, and an end product that is the best.</p>
+                    </div><!-- /.title -->
+                </div><!-- /.col-md-7 -->
+                <div class="col-md-6">
+                    <div class="contact-infos">
+                        <div class="single-contact-infos">
+                            <div class="icon-box">
+                                <i class="industrio-icon-phone-call"></i>
+                            </div><!-- /.icon-box -->
+                            <div class="text-box">
+                                <h3>Call us on</h3>
+                                <p>222-121-4562</p>
+                            </div><!-- /.text-box -->
+                        </div><!-- /.single-contact-infos -->
+                        <div class="single-contact-infos">
+                            <div class="icon-box">
+                                <i class="industrio-icon-envelope"></i>
+                            </div><!-- /.icon-box -->
+                            <div class="text-box">
+                                <h3>Email us</h3>
+                                <p>support@gmail.com</p>
+                            </div><!-- /.text-box -->
+                        </div><!-- /.single-contact-infos -->
+                    </div><!-- /.contact-infos -->
+                </div><!-- /.col-md-5 -->
+            </div><!-- /.row -->
+        </div><!-- /.contianer -->
+    </section><!-- /.contact-info-style-one -->
+
+{% endblock %}

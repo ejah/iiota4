@@ -16,7 +16,7 @@ class ReferenceStoryPlugin(CMSPlugin):
 @plugin_pool.register_plugin
 class ReferenceStoryBlockPlugin(CMSPluginBase):
     model = ReferenceStoryPlugin
-    name = _("Referene story block plugin")
+    name = _("Reference story block plugin")
     render_template = "_reference_story_block.html"
     cache = True
     allow_children = False

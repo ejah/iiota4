@@ -144,6 +144,7 @@ INSTALLED_APPS = (
     'djangocms_video',
     'djangocms_owl_carousel',
     'reference_stories',
+    'iiota_services',
     'iiota4'
 )
 

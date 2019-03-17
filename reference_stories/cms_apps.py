@@ -10,7 +10,7 @@ class ReferenceStoryApp(CMSApp):
     app_name = "ref_stories"
     name = "Reference Stories"
 
-    # menu = [ReferenceStoriesMenu,]
+    menu = [ReferenceStoriesMenu, ]
 
     def get_urls(self, page=None, language=None, **kwargs):
         return ["reference_stories.urls"]

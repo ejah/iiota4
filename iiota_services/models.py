@@ -10,7 +10,7 @@ class IIotaService(models.Model):
     name_second = models.CharField(max_length=25)
     image = models.ImageField(verbose_name='Service afbeelding')
     description = models.TextField(verbose_name='Beschrijving')
-    slug = models.SlugField()
+    slug = models.SlugField(editable=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -20,7 +20,11 @@ class IIotaService(models.Model):
         return self.name_first + " " + self.name_second
 
     def __str__(self):
-        return self.name
+        return self.name()
 
     def get_absolute_url(self):
         return reverse("iiota_services:service-detail", kwargs={"slug": self.slug})
+
+    class Meta:
+        verbose_name = 'IIota Service'
+        verbose_name_plural = 'IIota Services'

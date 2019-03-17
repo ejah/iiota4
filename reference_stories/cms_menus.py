@@ -1,3 +1,5 @@
+#  Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+
 from cms.menu_bases import CMSAttachMenu
 from menus.base import Menu, NavigationNode
 from menus.menu_pool import menu_pool
@@ -13,6 +15,7 @@ class ReferenceStoriesMenu(CMSAttachMenu):
         This method is used to build the menu tree.
         """
         nodes = []
+        nodes.append(NavigationNode(title='test', url="/", id='unieke_id'))
         for reference in ReferenceStory.objects.all():
             node = NavigationNode(
                 title=reference.title,

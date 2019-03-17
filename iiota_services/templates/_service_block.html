@@ -1,0 +1,20 @@
+{#Copyright#}
+{% load cms_tags thumbnail i18n %}
+
+<div class="col-md-6 col-sm-6 col-sm-12">
+    <div class="petrol single-service-style-four">
+        <div class="img-box">
+            <img src="{% thumbnail instance.service.image 389x248 crop %}" alt="{{ instance.service.name }}"/>
+            <div class="box">
+                <div class="content">
+                    <i class="industrio-icon-drop-of-liquid"></i>
+                    <h3><span>{{ instance.service.name_first }}</span> <br/> {{ instance.service.name_second }}</h3>
+                    <a href="{% url 'iiota_service:service-detail' slug=instance.service.slug %}"
+                       class="more hvr-sweep-to-right">{% trans 'Learn more' %}</a>
+                </div><!-- /.content -->
+            </div><!-- /.box -->
+        </div><!-- /.img-box -->
+    </div><!-- /.single-service-style-four -->
+</div><!-- /.col-md-4 -->
+
+<h3>Nog compleet maken</h3>

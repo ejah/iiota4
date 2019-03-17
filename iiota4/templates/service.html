@@ -1,0 +1,130 @@
+{% extends "base_three.html" %}
+{% load static cms_tags menu_tags i18n thumbnail %}
+
+{% block content %}
+    {% include "__breadcrumbs.html" %}
+
+    <section class="service-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="sidebar">
+                        <div class="single-sidebar service-sidebar">
+                            <ul class="service-list">
+                                <li class="active"><a href="iiota-single-service.html">Chemical Research</a></li>
+                                <li><a href="iiota-single-service.html">Fuel & Gas Management</a></li>
+                                <li><a href="iiota-single-service.html">Eco & Bio Power</a></li>
+                                <li><a href="iiota-single-service.html">Mechanical Engineering</a></li>
+                                <li><a href="iiota-single-service.html">Petroleum Refinery</a></li>
+                                <li><a href="iiota-single-service.html">Power & Energy Sector</a></li>
+                            </ul><!-- /.service-list -->
+                        </div><!-- /.single-sidebar service-sidebar -->
+                        <div class="single-sidebar broucher-sidebar">
+                            <div class="title">
+                                <h3>Brochures</h3>
+                            </div><!-- /.title -->
+                            <p>View our 2018 financial prospectus brochure for an easy to read guide on all of the
+                                services offer.</p>
+                            <a href="#" class="broucher-btn"><i
+                                    class="industrio-icon-emails-interface-download-symbol"></i> Download Brochure</a>
+                            <a href="#" class="broucher-btn"><i class="industrio-icon-pdf"></i> Characteristics</a>
+                        </div><!-- /.single-sidebar service-sidebar -->
+                    </div><!-- /.sidebar -->
+                </div><!-- /.col-md-3 col-sm-12 col-xs-12 -->
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="service-item-box">
+                        <div class="row masonary-layout">
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="gas single-service-style-four">
+                                    <div class="img-box">
+                                        <img src="../static/img/service-3-1.jpg" alt="Awesome Image"/>
+                                        <div class="box">
+                                            <div class="content">
+                                                <i class="industrio-icon-gas-station-1"></i>
+                                                <h3><span>Fuel & Gas</span> <br/> Management</h3>
+                                                <a href="#" class="more hvr-sweep-to-right">Learn more</a>
+                                            </div><!-- /.content -->
+                                        </div><!-- /.box -->
+                                    </div><!-- /.img-box -->
+                                </div><!-- /.single-service-style-four -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="chemical single-service-style-four">
+                                    <div class="img-box">
+                                        <img src="../../static/img/service-3-2.jpg" alt="Awesome Image"/>
+                                        <div class="box">
+                                            <div class="content">
+                                                <i class="industrio-icon-flasks"></i>
+                                                <h3><span>Chemical</span> <br/> Research</h3>
+                                                <a href="#" class="more hvr-sweep-to-right">Learn more</a>
+                                            </div><!-- /.content -->
+                                        </div><!-- /.box -->
+                                    </div><!-- /.img-box -->
+                                </div><!-- /.single-service-style-four -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="eco single-service-style-four">
+                                    <div class="img-box">
+                                        <img src="../../static/img/service-3-3.jpg" alt="Awesome Image"/>
+                                        <div class="box">
+                                            <div class="content">
+                                                <i class="industrio-icon-atomic"></i>
+                                                <h3><span>Echo & Bio</span> <br/> Power</h3>
+                                                <a href="#" class="more hvr-sweep-to-right">Learn more</a>
+                                            </div><!-- /.content -->
+                                        </div><!-- /.box -->
+                                    </div><!-- /.img-box -->
+                                </div><!-- /.single-service-style-four -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="mechanical single-service-style-four">
+                                    <div class="img-box">
+                                        <img src="../static/img/service-3-4.jpg" alt="Awesome Image"/>
+                                        <div class="box">
+                                            <div class="content">
+                                                <i class="industrio-icon-industry"></i>
+                                                <h3><span>Mechanical</span> <br/> Engineering</h3>
+                                                <a href="#" class="more hvr-sweep-to-right">Learn more</a>
+                                            </div><!-- /.content -->
+                                        </div><!-- /.box -->
+                                    </div><!-- /.img-box -->
+                                </div><!-- /.single-service-style-four -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="petrol single-service-style-four">
+                                    <div class="img-box">
+                                        <img src="../static/img/service-3-5.jpg" alt="Awesome Image"/>
+                                        <div class="box">
+                                            <div class="content">
+                                                <i class="industrio-icon-drop-of-liquid"></i>
+                                                <h3><span>Petroleum</span> <br/> Refinery</h3>
+                                                <a href="#" class="more hvr-sweep-to-right">Learn more</a>
+                                            </div><!-- /.content -->
+                                        </div><!-- /.box -->
+                                    </div><!-- /.img-box -->
+                                </div><!-- /.single-service-style-four -->
+                            </div><!-- /.col-md-4 -->
+                            <div class="col-md-6 col-sm-6 col-sm-12">
+                                <div class="power single-service-style-four">
+                                    <div class="img-box">
+                                        <img src="../../static/img/service-3-6.jpg" alt="Awesome Image"/>
+                                        <div class="box">
+                                            <div class="content">
+                                                <i class="industrio-icon-tower"></i>
+                                                <h3><span>Power & Energy</span> <br/> Sector</h3>
+                                                <a href="#" class="more hvr-sweep-to-right">Learn more</a>
+                                            </div><!-- /.content -->
+                                        </div><!-- /.box -->
+                                    </div><!-- /.img-box -->
+                                </div><!-- /.single-service-style-four -->
+                            </div><!-- /.col-md-4 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.service-item-box -->
+                </div><!-- /.col-md-9 col-sm-12 col-xs-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.service-page -->
+
+    {% include '_contact_info.html' %}
+
+{% endblock content %}

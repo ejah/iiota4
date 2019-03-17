@@ -1,0 +1,14 @@
+{#Copyright#}
+{% extends "base_three.html" %}
+{% load static cms_tags menu_tags i18n %}
+
+{% block content %}
+    {% include "__breadcrumbs.html" %}
+    <ul>
+        {% for service in service_list %}
+            <li>
+                <a href="{% url 'iiota_service:service-list' slug=service.slug %}">{{ service.name|truncatewords:2 }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

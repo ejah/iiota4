@@ -1,3 +1,5 @@
+#  Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+
 import os  # isort:skip
 from django.utils.translation import ugettext_lazy as _
 
@@ -171,7 +173,8 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('index_iiota.html', 'Home'),
-    ('iiota-single-service.html', 'Service'),
+    ('iiota-single-service.html', 'Service detail'),
+    ('service.html', 'Services'),
     ('iiota-blog.html', 'Blog landing'),
     ('about.html', _('About')),
     ('project.html', _('Project')),

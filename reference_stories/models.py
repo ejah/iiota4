@@ -1,7 +1,8 @@
+#  Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+
 from django.db import models
 from django.urls import reverse
 from django.template.defaultfilters import slugify
-from django.utils.translation import activate
 
 
 # Create your models here.

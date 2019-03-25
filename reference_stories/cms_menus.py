@@ -15,7 +15,6 @@ class ReferenceStoriesMenu(CMSAttachMenu):
         This method is used to build the menu tree.
         """
         nodes = []
-        nodes.append(NavigationNode(title='test', url="/", id='unieke_id'))
         for reference in ReferenceStory.objects.all():
             node = NavigationNode(
                 title=reference.title,

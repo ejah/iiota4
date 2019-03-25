@@ -15,6 +15,8 @@ class IIotaServiceMenu(CMSAttachMenu):
         This method is used to build the menu tree.
         """
         nodes = []
+
+        nodes.append(NavigationNode(title='test', url="/", id='unieke_id'))
         for service in IIotaService.objects.all():
             node = NavigationNode(
                 title=service.name_first,

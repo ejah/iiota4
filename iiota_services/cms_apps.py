@@ -9,7 +9,5 @@ class IIotaServiceApp(CMSApp):
     app_name = "iiota_services"
     name = "IIota Services"
 
-    # menu = [IIotaServiceMenu,]
-
     def get_urls(self, page=None, language=None, **kwargs):
         return ["iiota_services.urls"]

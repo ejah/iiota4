@@ -1,0 +1,85 @@
+{% extends "base_three.html" %}
+{% load static cms_tags menu_tags i18n thumbnail sekizai_tags %}
+
+{% block content %}
+    {% include "__breadcrumbs.html" %}
+
+
+    <section class="contact-page sec-pad">
+        <div class="container">
+            <div class="sec-title text-center">
+                {% placeholder "contact_pagina_text" %}
+            </div><!-- /.sec-title text-center -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div
+                            class="google-map"
+                            id="contact-page-google-map"
+                            data-map-lat="51.762957"
+                            data-map-lng="5.875373"
+                            data-icon-path="img/map-marker.png"
+                            data-map-title="Molenhoek, Limburg, Nederland"
+                            data-map-zoom="11"
+                            data-markers='{
+                                "marker-1": [51.762957, 5.875373, "<h4>{% trans "Kantoor" %}</h4><p>Molenhoek (L), {% trans "Nederland" %}</p>"],
+                            }'>
+
+                    </div>
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6">
+                    <form action="inc/sendemail.php" class="contact-form">
+                        <h3>Send Mail</h3>
+                        <input type="text" placeholder="Your name.." name="name"/>
+                        <input type="text" placeholder="Your email address.." name="email"/>
+                        <input type="text" placeholder="Your Location.." name="subject"/>
+                        <textarea placeholder="Write..." name="message"></textarea>
+                        <button type="submit" class="hvr-sweep-to-right">Send</button>
+                    </form>
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.contact-page -->
+
+
+    <section class="feature-style-one">
+        <div class="container">
+            <div class="clearfix">
+                <div class="col-md-4">
+                    <div class="single-feature-style-one">
+                        <div class="icon-box">
+                            <i class="industrio-icon-innovation"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            {% placeholder "feature_block_1" %}
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-feature-style-one -->
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <div class="single-feature-style-one light">
+                        <div class="icon-box">
+                            <i class="industrio-icon-secure-shield"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            {% placeholder "feature_block_2" %}
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-feature-style-one -->
+                </div><!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <div class="single-feature-style-one light">
+                        <div class="icon-box">
+                            <i class="industrio-icon-support"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            {% placeholder "feature_block_3" %}
+                        </div><!-- /.text-box -->
+                    </div><!-- /.single-feature-style-one -->
+                </div><!-- /.col-md-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.feature-style-one -->
+
+    {% include '_contact_info.html' %}
+{% endblock content %}
+{% addtoblock "js" %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR_v7xmxGFO4LHv1NX5VbymORwL_jv_fY"></script>
+{% endaddtoblock %}

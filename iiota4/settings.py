@@ -131,6 +131,11 @@ INSTALLED_APPS = (
     'aldryn_newsblog',
     'aldryn_people',
     'aldryn_translation_tools',
+    'absolute',
+    'aldryn_forms',
+    'aldryn_forms.contrib.email_notifications',
+    'captcha',
+    'emailit',
     'parler',
     'sortedm2m',
     'taggit',
@@ -189,6 +194,7 @@ CMS_TEMPLATES = (
     ('iiota-blog.html', 'Blog landing'),
     ('about.html', _('About')),
     ('project.html', _('Project')),
+    ('contact.html', _('Contact')),
 )
 
 CMS_PERMISSION = True

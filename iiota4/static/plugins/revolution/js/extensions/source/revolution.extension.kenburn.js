@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 /********************************************
  * REVOLUTION 5.4.2 EXTENSION - KEN BURN
  * @version: 1.3.1 (15.05.2017)

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 /*!
  * Isotope PACKAGED v2.1.1
  * Filter & sort magical layouts

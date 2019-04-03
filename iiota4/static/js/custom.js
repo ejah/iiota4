@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 "use strict"; // Start of use strict
 
 

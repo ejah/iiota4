@@ -17,11 +17,11 @@
                             id="contact-page-google-map"
                             data-map-lat="51.762957"
                             data-map-lng="5.875373"
-                            data-icon-path="{% static 'img/map-marker.png' %}"
+                            data-icon-path="{% static 'img/tandwiel_wit.png' %}"
                             data-map-title="Molenhoek, Limburg, Nederland"
                             data-map-zoom="11"
                             data-markers='{
-                                "marker-1": [51.762957, 5.875373, "<h4>{% trans "Kantoor" %}</h4><p>Molenhoek (L), {% trans "Nederland" %}</p>"],
+                                "marker-1": [51.762957, 5.875373, "<h4>{% trans 'Kantoor' %}</h4><p>Molenhoek (L), {% trans 'Nederland' %}</p>"]
                             }'>
 
                     </div>
@@ -81,7 +81,8 @@
 
     {% include '_contact_info.html' %}
     {% addtoblock "js" %}
-        <script src="{% static 'js/gmaps.js' %}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR_v7xmxGFO4LHv1NX5VbymORwL_jv_fY"></script>
+        <script src="{% static 'js/gmaps2.js' %}"></script>
+        <script src="{% static 'js/map-helper.js' %}"></script>
     {% endaddtoblock %}
 {% endblock content %}

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 /**************************************************************************
  * jquery.themepunch.revolution.js - jQuery Plugin for Revolution Slider
  * @version: 5.4.5 (17.05.2017)

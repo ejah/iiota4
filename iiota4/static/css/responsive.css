@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 @media(max-width: 1200px) {
     .header-navigation {padding-left: 15px;padding-right: 15px;}
     .header-navigation .container .main-navigation {display: none !important;}

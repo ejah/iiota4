@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 /**************************************************************************
  * tp-color-picker.js - Color Picker Plugin for Revolution Slider
  * @version: 1.0.1 (2.28.2017)

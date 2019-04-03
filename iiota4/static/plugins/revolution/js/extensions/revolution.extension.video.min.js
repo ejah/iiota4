@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 /********************************************
  * REVOLUTION 5.4.2 EXTENSION - VIDEO FUNCTIONS
  * @version: 2.1.6 (15.05.2017)

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 if (!('boxShadow' in document.body.style)) {
     document.body.setAttribute('class', 'noBoxShadow');
 }

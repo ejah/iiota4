@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 /************************************************
  * REVOLUTION 5.4.2 EXTENSION - SLIDE ANIMATIONS
  * @version: 1.8 (17.05.2017)

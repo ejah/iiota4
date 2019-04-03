@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+ */
+
 @function pow($number, $exp) {
   $value: 1;
   @if $exp > 0 {

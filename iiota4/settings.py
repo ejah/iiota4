@@ -241,6 +241,7 @@ DJANGOCMS_LINK_TEMPLATES = [
     ('feature', _('Featured Version')),
     ('welkom', _('Welcome Version')),
     ('service_more', _('More')),
+    ('header_bar', _('Header')),
 ]
 
 

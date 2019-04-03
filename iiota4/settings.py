@@ -62,7 +62,7 @@ MEDIA_ROOT = '/webapps/iiota4/media/'
 STATIC_ROOT = '/webapps/iiota4/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'iiota4', 'static'),
 )
 SITE_ID = 1
 

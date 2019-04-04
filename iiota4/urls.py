@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+#  Copyright (c) 2019. IIOTA (www.iiota.nl). All rights reserved.
+
 from __future__ import absolute_import, print_function, unicode_literals
 
 from cms.sitemaps import CMSSitemap
@@ -19,24 +22,25 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     # url(r'^', include('reference_stories.urls')),
+    url(r'^captcha/', include('captcha.urls')),
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
 )
 
-
 # This is only needed when using runserver.
 if settings.DEBUG:
     urlpatterns = [
-        url(r'^media/(?P<path>.*)$', serve,
-            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        ] + staticfiles_urlpatterns() + urlpatterns
+                      url(r'^media/(?P<path>.*)$', serve,
+                          {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+                  ] + staticfiles_urlpatterns() + urlpatterns
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns = [
-        # path('__debug__/', include(debug_toolbar.urls)),
+                      # path('__debug__/', include(debug_toolbar.urls)),
 
-        # For django versions before 2.0:
-        url(r'^__debug__/', include(debug_toolbar.urls)),
+                      # For django versions before 2.0:
+                      url(r'^__debug__/', include(debug_toolbar.urls)),
 
-    ] + urlpatterns
+                  ] + urlpatterns

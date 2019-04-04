@@ -3,12 +3,17 @@
 from django.db import models
 from django.urls import reverse
 from django.template.defaultfilters import slugify
+from filer.fields.image import FilerImageField
 
 
 class IIotaService(models.Model):
     name_first = models.CharField(max_length=25)
     name_second = models.CharField(max_length=25)
-    image = models.ImageField(verbose_name='Service afbeelding')
+    image = FilerImageField(verbose_name='Service image',
+                            null=True,
+                            blank=True,
+                            on_delete=models.SET_NULL,
+                            )
     description = models.TextField(verbose_name='Beschrijving')
     slug = models.SlugField(editable=False)
 

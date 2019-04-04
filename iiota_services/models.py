@@ -15,7 +15,7 @@ class IIotaService(models.Model):
                             on_delete=models.SET_NULL,
                             )
     description = models.TextField(verbose_name='Beschrijving')
-    slug = models.SlugField(editable=False)
+    slug = models.SlugField(editable=False, max_length=255)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

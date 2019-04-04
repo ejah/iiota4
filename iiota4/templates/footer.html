@@ -1,4 +1,4 @@
-{% load static cms_tags menu_tags%}
+{% load static cms_tags menu_tags i18n %}
 <footer class="site-footer fixed-footer">
     <div class="main-footer">
         <div class="container">
@@ -22,14 +22,14 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget services-widget">
                         <div class="title">
-                            <h3>Services</h3>
+                            <h3>{% trans 'Diensten' %}</h3>
                         </div><!-- /.title -->
                         <ul class="links-list">
-                            <li><a href="#">Engineering</a></li>
-                            <li><a href="#">Petrolium & Gas</a></li>
-                            <li><a href="#">Power & Engergy</a></li>
-                            <li><a href="#">Mechanical Engineering</a></li>
-                            <li><a href="#">Agricultural Processing</a></li>
+                            <li><a href="#">{% trans 'Advies Industrie 4.0' %}</a></li>
+                            <li><a href="#">{% trans 'Implementatie' %}</a></li>
+                            <li><a href="#">{% trans 'Ontwikkeling IIoT' %}</a></li>
+                            <li><a href="#">{% trans 'Sales & marketing advies' %}</a></li>
+                            {#                            <li><a href="#">Agricultural Processing</a></li>#}
                         </ul><!-- /.links-list -->
                     </div><!-- /.footer-widget services-widget -->
                 </div><!-- /.col-md-3 -->
@@ -48,9 +48,9 @@
     </div><!-- /.main-footer -->
     <div class="bottom-footer">
         <div class="container">
-            <div class="left-text pull-left"><p>&copy; Copyright Industrio 2018. All right reserved.</p></div>
+            <div class="left-text pull-left"><p>&copy; Copyright IIOTA 2019. Alle rechten voorbehouden.</p></div>
             <!-- /.left-text -->
-            <div class="right-text pull-right"><p>Created by Themexriver</p></div><!-- /.right-text -->
+            <div class="right-text pull-right"><p>Theme created by Themexriver</p></div><!-- /.right-text -->
         </div><!-- /.container -->
     </div><!-- /.bottom-footer -->
 </footer><!-- /.site-footer -->

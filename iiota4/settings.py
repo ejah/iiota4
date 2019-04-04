@@ -32,9 +32,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=8+fj^7j$i4iemxc&b_e_fet70&87!+)!_j%(l)4zj5_m@r&6j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['test.iiota.nl']
+ALLOWED_HOSTS = ['test.iiota.nl', '91.186.8.88', 'www.iiota.nl', 'iiota.nl', ]
 
 # Application definition
 
@@ -305,3 +305,6 @@ LOGGING = {
 EMAIL_HOST = 'smtp.iiota.nl'
 EMAIL_HOST_PASSWORD = '4dL-a7Q-A32-JZ5'
 EMAIL_HOST_USER = 'info@iiota.nl'
+
+# Captcha settings
+CAPTCHA_FONT_SIZE = 30

@@ -3,7 +3,7 @@
     {# this needs to be in one line for rendering purpose #}
 {% endspaceless %}<a href="{{ link }}" class="rqa-btn "><span
         class="inner">{% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% empty %}
-    {{ instance.name }}</span>{% endfor %}<i class="fa fa-carret-right"></i></a>{% spaceless %}
+    {{ instance.name }}{% endfor %}<i class="fa fa-carret-right"></i></span></a>{% spaceless %}
     {#<a href="#" class="rqa-btn"><span class="inner">{% static_placeholder 'contact_link' %}<i#}
     {#                            class="fa fa-caret-right"></i></span></a>{% endspaceless %}{% comment %}#}
 {% endspaceless %}{% comment %}

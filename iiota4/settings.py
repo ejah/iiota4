@@ -171,6 +171,13 @@ CMS_LANGUAGES = {
             'public': True,
             'hide_untranslated': False,
         },
+        {
+            'public': True,
+            'code': 'en',
+            'hide_untranslated': False,
+            'name': gettext('en'),
+            'redirect_on_fallback': True,
+        }
     ],
     2: [
         {

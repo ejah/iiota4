@@ -32,9 +32,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=8+fj^7j$i4iemxc&b_e_fet70&87!+)!_j%(l)4zj5_m@r&6j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['test.iiota.nl', '91.186.8.88', 'www.iiota.nl', 'iiota.nl', ]
+ALLOWED_HOSTS = ['www.iiota.nl', '91.186.8.88', '*.iiota.nl', 'iiota.nl', ]
 
 # Application definition
 
@@ -315,3 +315,19 @@ EMAIL_HOST_USER = 'info@iiota.nl'
 
 # Captcha settings
 CAPTCHA_FONT_SIZE = 30
+
+# For HTTPS serving behind NGINX
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# Chaching
+# if not DEVELOPMENT:
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        # 'LOCATION': '/home/nv1lovi7/tmp/django_cache',
+        'LOCATION': '/tmp/django_cache'
+    }
+}

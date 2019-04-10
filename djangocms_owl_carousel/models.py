@@ -7,7 +7,6 @@ from django.urls import reverse
 from django.template.defaultfilters import slugify
 
 # from django.utils.translation import ugettext_lazy as _
-from filer.fields.image import FilerImageField
 
 SERVICE_STYLE_ONE = 1
 SERVICE_STYLE_TWO = 2
@@ -45,11 +44,7 @@ class CarouselHolder(CMSPlugin):
     pass
 
 class CarouselItem(CMSPlugin):
-    image_thumb = FilerImageField(verbose_name='Thumb image',
-                                  null=True,
-                                  blank=True,
-                                  on_delete=models.SET_NULL,
-                                  )
+    image_thumb = models.ImageField(verbose_name='Thumb image', null=True)
     slide_index = models.IntegerField(verbose_name='slide_index', null=False, default=1)
     caption = models.CharField(max_length=100, null=True)
     text = models.TextField(max_length=500, null=True)
@@ -140,7 +135,7 @@ class OwlCarouselItem(CMSPlugin):
         (INDUSTRIO_ICON_PHONE_CALL, 'Phone call'),
         (INDUSTRIO_ICON_RIGHT_QUOTE, 'Right quote'),)
 
-    image = FilerImageField(verbose_name='Thumb image', null=True, blank=True, on_delete=models.SET_NULL)
+    image = models.ImageField(verbose_name='Thumb image', null=True)
     alt_text = models.CharField(max_length=100, null=True)
     style = models.ForeignKey(OwlStyles, on_delete=None)
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="IIota_amen">
+  <component name="PublishConfigData" serverName="IIota_amen" uploadOnCheckin="d7fe709a-4754-4502-a4ce-b375ce2f7ef0">
     <serverData>
       <paths name="IIota_Local">
         <serverdata>
@@ -20,5 +20,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="IIota_amen" />
   </component>
 </project>
